@@ -1,0 +1,1951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regenerative Recalibration Weekend · Dragonfly Ranch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Text/Lettering */
+            --copper: #b87333;
+            --copper-light: #d4956a;
+            --copper-bright: #e0a574;
+            
+            /* Forest Greens */
+            --forest: #1e3a2f;
+            --forest-mid: #25493a;
+            
+            /* Teal-Sage */
+            --sage: #5d8a7a;
+            --sage-bright: #7db5a4;
+            
+            /* Burnished Gold */
+            --gold: #b8993a;
+            --gold-bright: #d4b85c;
+            --gold-shiny: #e8c43a;
+            
+            /* Dusty Rose */
+            --rose: #c48e7a;
+            --rose-bright: #d4a393;
+            
+            /* Burgundy-Wine */
+            --burgundy: #8b4050;
+            --burgundy-soft: #a0606e;
+            
+            /* Neutrals */
+            --ink: #1a1612;
+            --cream: #faf6f0;
+            --warm-white: #f5efe6;
+            --parchment: #ede5d8;
+            --stone: #6a6054;
+            --stone-light: #a39888;
+            
+            /* High-Contrast on Dark */
+            --bright-white: #ffffff;
+            --on-green: #f0ebe3;
+            --on-green-secondary: #d5cfc4;
+            --on-green-muted: #b8b0a3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Top Banner */
+        .top-banner {
+            background: linear-gradient(135deg, var(--forest) 0%, var(--forest-mid) 100%);
+            padding: 1.5rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--sage);
+        }
+
+        .top-banner p {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            line-height: 1.55;
+            color: var(--bright-white);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to bottom, var(--forest) 0%, var(--forest-mid) 100%);
+            padding: 6rem 2rem 8rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(93, 138, 122, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(184, 153, 58, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            font-family: 'Jost', sans-serif;
+            font-weight: 500;
+            font-size: 0.8rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--sage-bright);
+            margin-bottom: 2rem;
+            display: inline-block;
+            border: 1px solid var(--sage);
+            padding: 0.6rem 1.5rem;
+            border-radius: 2px;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: clamp(3rem, 6vw, 5.2rem);
+            line-height: 1.08;
+            color: var(--on-green);
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--copper-bright);
+            font-weight: 300;
+        }
+
+        .hero-lead {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            color: var(--on-green-secondary);
+            margin-bottom: 3rem;
+            max-width: 800px;
+        }
+
+        .hero-body {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.08rem;
+            line-height: 1.75;
+            color: var(--bright-white);
+            max-width: 750px;
+            margin-bottom: 3rem;
+        }
+
+        .hero-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-details {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.05rem;
+            color: var(--on-green-secondary);
+            margin-bottom: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .hero-details span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-details span::before {
+            content: '◆';
+            color: var(--copper-bright);
+            font-size: 0.7rem;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .btn {
+            font-family: 'Jost', sans-serif;
+            font-weight: 500;
+            font-size: 0.82rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 1rem 2.5rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--copper);
+            color: var(--cream);
+            border: 2px solid var(--copper);
+        }
+
+        .btn-primary:hover {
+            background: var(--copper-bright);
+            border-color: var(--copper-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(184, 115, 51, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--bright-white);
+            border: 2px solid var(--sage);
+        }
+
+        .btn-secondary:hover {
+            background: var(--sage);
+            border-color: var(--sage-bright);
+        }
+
+        .hero-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--on-green-secondary);
+            margin-top: 2rem;
+        }
+
+        /* Section Base Styles */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .section-label {
+            font-family: 'Jost', sans-serif;
+            font-weight: 500;
+            font-size: 0.8rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--copper);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            line-height: 1.2;
+            color: var(--ink);
+            margin-bottom: 2rem;
+        }
+
+        .section-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Opening Question Section */
+        .question-section {
+            background: var(--parchment);
+            text-align: center;
+        }
+
+        .question-section .big-question {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-size: clamp(2rem, 4.5vw, 3.2rem);
+            line-height: 1.3;
+            color: var(--ink);
+            margin-bottom: 4rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .question-section .big-question em {
+            font-style: italic;
+            color: var(--copper);
+        }
+
+        .question-section p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--stone);
+            max-width: 850px;
+            margin: 0 auto 3rem;
+        }
+
+        /* Question Pills */
+        .question-pills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 4rem auto 0;
+        }
+
+        .question-pill {
+            background: var(--warm-white);
+            padding: 2.5rem 2rem;
+            border-left: 3px solid var(--copper);
+            transition: all 0.3s ease;
+        }
+
+        .question-pill:hover {
+            transform: translateX(8px);
+            box-shadow: -8px 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .question-pill h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 1.35rem;
+            color: var(--copper);
+            margin-bottom: 1rem;
+        }
+
+        .question-pill p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: var(--stone);
+            margin: 0;
+        }
+
+        .closing-question {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--stone);
+            max-width: 850px;
+            margin: 4rem auto 0;
+            font-style: italic;
+        }
+
+        /* What This Is Section */
+        .what-section {
+            background: var(--cream);
+        }
+
+        .what-grid {
+            display: grid;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .what-content p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--stone);
+            margin-bottom: 1.5rem;
+        }
+
+        .what-content ul {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .what-content ul li {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--stone);
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .what-content ul li::before {
+            content: '◆';
+            position: absolute;
+            left: 0;
+            color: var(--copper);
+            font-size: 0.7rem;
+        }
+
+        /* Why This Works */
+        .why-section {
+            background: linear-gradient(to bottom, var(--parchment) 0%, var(--warm-white) 100%);
+        }
+
+        .why-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .why-content p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--stone);
+            margin-bottom: 1.5rem;
+        }
+
+        .why-highlight {
+            background: var(--cream);
+            border-left: 4px solid var(--burgundy);
+            padding: 2rem;
+            margin: 3rem 0;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            line-height: 1.6;
+            color: var(--ink);
+        }
+
+        /* Clinical Foundation */
+        .clinical-section {
+            background: var(--cream);
+        }
+
+        .modalities-grid {
+            display: grid;
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .modality-card {
+            background: var(--warm-white);
+            padding: 3rem;
+            border-top: 4px solid var(--copper);
+            position: relative;
+        }
+
+        .modality-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: 4rem;
+            color: var(--copper);
+            opacity: 0.2;
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+        }
+
+        .modality-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 2rem;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .modality-card h4 {
+            font-family: 'Jost', sans-serif;
+            font-weight: 400;
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--copper);
+            margin-bottom: 2rem;
+        }
+
+        .modality-card p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--stone);
+            margin-bottom: 1.5rem;
+        }
+
+        .modality-card .impact {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            color: var(--copper);
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--parchment);
+        }
+
+        /* Connectivity Section */
+        .connectivity-section {
+            background: var(--parchment);
+        }
+
+        .connectivity-intro {
+            max-width: 850px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        .connectivity-intro p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--stone);
+        }
+
+        .connectivity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .connectivity-card {
+            background: var(--warm-white);
+            padding: 3rem 2.5rem;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .connectivity-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .connectivity-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--copper);
+        }
+
+        .connectivity-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 1.8rem;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .connectivity-card h4 {
+            font-family: 'Jost', sans-serif;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--copper);
+            margin-bottom: 1.5rem;
+        }
+
+        .connectivity-card p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.02rem;
+            line-height: 1.75;
+            color: var(--stone);
+        }
+
+        /* Group Process */
+        .process-section {
+            background: var(--cream);
+        }
+
+        .process-intro {
+            max-width: 850px;
+            margin: 0 auto 4rem;
+        }
+
+        .process-intro p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--stone);
+            margin-bottom: 1.5rem;
+        }
+
+        .process-grid {
+            display: grid;
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .process-item {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .process-roman {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 3rem;
+            color: var(--copper);
+            opacity: 0.5;
+        }
+
+        .process-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: var(--ink);
+            margin-bottom: 1rem;
+        }
+
+        .process-content p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: var(--stone);
+        }
+
+        /* What Becomes Possible */
+        .possible-section {
+            background: var(--warm-white);
+        }
+
+        .possible-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .possible-card {
+            padding: 2.5rem 2rem;
+            background: var(--cream);
+            border-left: 3px solid var(--sage);
+        }
+
+        .possible-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .possible-card h4 {
+            font-family: 'Jost', sans-serif;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: var(--copper);
+            margin-bottom: 1.5rem;
+        }
+
+        .possible-card p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--stone);
+        }
+
+        /* Schedule Section */
+        .schedule-section {
+            background: linear-gradient(to bottom, var(--parchment) 0%, var(--cream) 100%);
+        }
+
+        .schedule-intro {
+            max-width: 850px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        .schedule-intro p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--stone);
+            margin-bottom: 1rem;
+        }
+
+        .days-grid {
+            display: grid;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .day-card {
+            background: var(--warm-white);
+            padding: 3rem;
+            border-top: 4px solid var(--burgundy);
+        }
+
+        .day-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--parchment);
+            padding-bottom: 1rem;
+        }
+
+        .day-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 2rem;
+            color: var(--ink);
+        }
+
+        .day-date {
+            font-family: 'Jost', sans-serif;
+            font-weight: 400;
+            font-size: 0.95rem;
+            color: var(--copper);
+            letter-spacing: 0.1em;
+        }
+
+        .day-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: var(--burgundy);
+            margin-bottom: 2rem;
+        }
+
+        .session-list {
+            list-style: none;
+        }
+
+        .session-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--parchment);
+        }
+
+        .session-item:last-child {
+            border-bottom: none;
+        }
+
+        .session-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 1.3rem;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .session-item p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--stone);
+        }
+
+        /* Guides Section */
+        .guides-section {
+            background: var(--cream);
+        }
+
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+
+        .guide-card {
+            background: var(--warm-white);
+            padding: 3rem;
+        }
+
+        .guide-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 2rem;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .guide-card h4 {
+            font-family: 'Jost', sans-serif;
+            font-weight: 400;
+            font-size: 0.95rem;
+            color: var(--copper);
+            letter-spacing: 0.1em;
+            margin-bottom: 2rem;
+        }
+
+        .guide-card p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: var(--stone);
+            margin-bottom: 1.5rem;
+        }
+
+        .guide-brings {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--parchment);
+        }
+
+        .guide-brings h5 {
+            font-family: 'Jost', sans-serif;
+            font-weight: 500;
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--copper);
+            margin-bottom: 1.5rem;
+        }
+
+        .guide-brings ul {
+            list-style: none;
+        }
+
+        .guide-brings li {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--stone);
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 1.2rem;
+        }
+
+        .guide-brings li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--copper);
+        }
+
+        /* Included Section */
+        .included-section {
+            background: var(--parchment);
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .included-card {
+            background: var(--warm-white);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .included-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .included-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .included-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 1.4rem;
+            color: var(--ink);
+            margin-bottom: 1rem;
+        }
+
+        .included-card p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 0.98rem;
+            line-height: 1.65;
+            color: var(--stone);
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background: var(--cream);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .pricing-card {
+            background: var(--warm-white);
+            padding: 3rem;
+            border-top: 4px solid var(--copper);
+            position: relative;
+        }
+
+        .pricing-badge {
+            font-family: 'Jost', sans-serif;
+            font-weight: 500;
+            font-size: 0.75rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--copper);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 2rem;
+            color: var(--ink);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card .dates {
+            font-family: 'Jost', sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            color: var(--stone);
+            margin-bottom: 2rem;
+        }
+
+        .pricing-card p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--stone);
+            margin-bottom: 1.5rem;
+        }
+
+        .price {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 3rem;
+            color: var(--copper);
+            margin: 2rem 0;
+        }
+
+        .price-note {
+            font-family: 'Jost', sans-serif;
+            font-weight: 400;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--stone);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .pricing-features li {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 0.98rem;
+            line-height: 1.6;
+            color: var(--stone);
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--copper);
+            font-weight: 500;
+        }
+
+        .pricing-note-box {
+            background: var(--parchment);
+            padding: 1.5rem;
+            margin-top: 2rem;
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--stone);
+        }
+
+        /* Logistics Section */
+        .logistics-section {
+            background: var(--warm-white);
+        }
+
+        .logistics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .logistics-item h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: var(--copper);
+            margin-bottom: 1rem;
+        }
+
+        .logistics-item p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--stone);
+        }
+
+        /* Application Process */
+        .application-section {
+            background: var(--parchment);
+        }
+
+        .application-intro {
+            max-width: 850px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        .application-intro p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--stone);
+        }
+
+        .application-steps {
+            display: grid;
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .application-step {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 2rem;
+            align-items: start;
+            background: var(--warm-white);
+            padding: 2rem;
+        }
+
+        .step-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 2.5rem;
+            color: var(--copper);
+        }
+
+        .step-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 1.3rem;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--stone);
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--forest) 0%, var(--forest-mid) 100%);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .final-cta-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .final-cta h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+            line-height: 1.3;
+            color: var(--on-green);
+            margin-bottom: 2rem;
+        }
+
+        .final-cta h2 em {
+            font-style: italic;
+            color: var(--copper-bright);
+        }
+
+        .final-cta p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: var(--bright-white);
+            margin-bottom: 1.5rem;
+        }
+
+        .final-cta .cta-buttons {
+            margin-top: 3rem;
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .final-cta .cta-note {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: var(--on-green-secondary);
+            margin-top: 2rem;
+        }
+
+        .final-details {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 0.95rem;
+            color: var(--on-green-secondary);
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--sage);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--ink);
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+        }
+
+        footer h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 1.8rem;
+            color: var(--copper-bright);
+            margin-bottom: 0.5rem;
+        }
+
+        footer p {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1rem;
+            color: var(--stone-light);
+            margin-bottom: 0.5rem;
+        }
+
+        footer .tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--copper);
+            margin-top: 2rem;
+        }
+
+        /* Decorative Elements */
+        .decorative-bar {
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, var(--copper) 50%, transparent 100%);
+            margin: 4rem auto;
+            max-width: 300px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .hero {
+                padding: 4rem 1.5rem 5rem;
+            }
+
+            .pricing-grid,
+            .guides-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .connectivity-grid,
+            .question-pills {
+                grid-template-columns: 1fr;
+            }
+
+            .process-item {
+                grid-template-columns: 50px 1fr;
+                gap: 1rem;
+            }
+
+            .day-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <p>Dragonfly Ranch · Near Boulder, Colorado · By Invitation</p>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">May 1–3, 2026 · Dragonfly Ranch</div>
+            <h1>Regenerative<br><em>Recalibration</em><br>Weekend</h1>
+            <p class="hero-lead">A 2.5-day all-inclusive residential clinical immersive for nervous system regulation, microcirculation optimization, structural integration, and embodied renewal at Dragonfly Ranch.</p>
+            
+            <div class="hero-details">
+                <span>2.5-day residential experience</span>
+                <span>Lodging + chef-prepared meals included</span>
+                <span>$1,369 introductory investment</span>
+                <span>By application</span>
+            </div>
+
+            <div class="hero-cta">
+                <a href="#apply" class="btn btn-primary">Apply to Join</a>
+                <a href="#experience" class="btn btn-secondary">Explore the Experience</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opening Context -->
+    <section class="question-section" id="experience">
+        <div class="section-content">
+            <div class="section-label">The World Is Moving Quickly</div>
+            <div class="big-question">
+                There is a lot moving through life right now — uncertainty, pressure, change, responsibility, and the constant demand to keep <em>adapting.</em>
+            </div>
+            
+            <p>Many people have learned to hold too much for too long.</p>
+            <p>This weekend creates space to begin sensing what is truly yours to carry, what needs to be processed, and what your system is ready to release.</p>
+
+            <div style="margin: 3rem 0;">
+                <p style="font-size: 1.15rem; font-weight: 400;">In moments like this, your capacity matters.<br>
+                Your clarity matters. Your energy matters.<br>
+                Your nervous system matters. Your ability to stay connected to yourself matters.</p>
+            </div>
+
+            <p style="font-size: 1.15rem; margin-top: 3rem;">Your body is not a problem to fix.<br>It is the system that determines what you can access, sustain, and create.</p>
+
+            <p style="font-style: italic; margin-top: 2rem;">This process works directly with capacity and coherence — supporting the biology beneath your ability to feel steady, present, and fully yourself.</p>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: var(--warm-white);">
+                <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 500; color: var(--copper);">Being who you are, fully, is not a luxury.<br>It is one of the most powerful investments you can make.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Question Pills -->
+    <section style="background: var(--cream); padding: 6rem 2rem;">
+        <div class="section-content">
+            <div class="section-label">A Question Worth Sitting With</div>
+            <h2 class="section-title">Is this the reset your body has been asking for?</h2>
+            <p style="font-family: 'Jost', sans-serif; font-weight: 300; font-size: 1.1rem; line-height: 1.8; color: var(--stone); max-width: 850px; margin: 0 auto 3rem; text-align: center;">In a world asking more from your nervous system than ever before, the most important place to restore stability is inside your own body.</p>
+
+            <div class="question-pills">
+                <div class="question-pill">
+                    <h3>Energy</h3>
+                    <p>What would it feel like to have energy that actually stays?</p>
+                </div>
+                <div class="question-pill">
+                    <h3>Nervous System</h3>
+                    <p>What if your nervous system could settle beneath everything you carry?</p>
+                </div>
+                <div class="question-pill">
+                    <h3>Clarity</h3>
+                    <p>What would change if your mind felt clearer and decisions felt clean instead of heavy?</p>
+                </div>
+                <div class="question-pill">
+                    <h3>Emotional Capacity</h3>
+                    <p>What if you could feel more — without becoming overwhelmed?</p>
+                </div>
+                <div class="question-pill">
+                    <h3>Capacity</h3>
+                    <p>What if the next level of your life doesn't require more effort, but more capacity?</p>
+                </div>
+                <div class="question-pill">
+                    <h3>Support</h3>
+                    <p>What would it feel like to not carry everything alone for a few days?</p>
+                </div>
+            </div>
+
+            <p class="closing-question">If one or more of these questions lands in your body, this weekend may be the right next step.</p>
+
+            <p style="font-family: 'Jost', sans-serif; font-weight: 300; font-size: 1.1rem; line-height: 1.8; color: var(--stone); max-width: 850px; margin: 3rem auto 0; text-align: center;">This experience is designed for people who are functioning, but know their body, clarity, energy, or nervous system needs deeper support than everyday life allows.</p>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: var(--warm-white); max-width: 850px; margin-left: auto; margin-right: auto;">
+                <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-style: italic; color: var(--copper); text-align: center;">You don't need more insight. You need a system that can integrate what you already know.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What This Is -->
+    <section class="what-section">
+        <div class="section-content">
+            <div class="section-label">What This Weekend Is</div>
+            <h2 class="section-title">Where Transformation Becomes Embodied</h2>
+            
+            <div class="what-content">
+                <p>This is not a spa retreat. It is a clinically grounded, residential recalibration of your system — designed for people who want to meet this moment with more clarity, energy, steadiness, and embodied presence.</p>
+
+                <p style="font-size: 1.15rem; font-weight: 400; margin-top: 2rem;">Three modalities. One environment. One intentionally designed process.</p>
+
+                <p>Working together to regulate your nervous system, restore your biological capacity, and open what becomes possible when your body has the support it needs.</p>
+
+                <div style="margin: 3rem 0; padding: 2.5rem; background: var(--parchment);">
+                    <ul>
+                        <li>The setting is Dragonfly Ranch — a private forest property near Boulder, Colorado.</li>
+                        <li>Your investment includes overnight lodging, exquisite chef-prepared meals, all clinical sessions, group process, and integration support.</li>
+                        <li>Full logistics and arrival details are shared upon enrollment.</li>
+                        <li>The group is small because real transformation is intimate.</li>
+                        <li>And because the connections that form here — within yourself, between the people around you, and in relationship to what you are here to do — are part of the work.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why This Works -->
+    <section class="why-section">
+        <div class="section-content">
+            <div class="section-label">Why This Works When Other Things Haven't</div>
+            <h2 class="section-title">The Problem Isn't You. It's the Approach.</h2>
+            
+            <div class="why-content">
+                <p>Most approaches try to change your life from the outside in: more mindset, more strategy, more effort. And for a while — it works. But it doesn't hold.</p>
+
+                <p style="font-size: 1.15rem; font-weight: 400; margin-top: 2rem;">Because the underlying system hasn't changed.</p>
+
+                <div class="why-highlight">
+                    This work is different. It supports the conditions inside your body so change has somewhere to land.
+                </div>
+
+                <p>Not forced. Not temporary. Not dependent on willpower.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical Foundation -->
+    <section class="clinical-section">
+        <div class="section-content">
+            <div class="section-label">The Clinical Foundation</div>
+            <h2 class="section-title">Three Modalities. One Extraordinary Combination.</h2>
+            
+            <p style="font-family: 'Jost', sans-serif; font-weight: 300; font-size: 1.1rem; line-height: 1.8; color: var(--stone); max-width: 850px; margin: 0 auto 3rem; text-align: center;">Each one is powerful on its own. Together — in this sequence, in this setting — they create something most people have never experienced and most will never forget.</p>
+
+            <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.25rem; color: var(--copper); text-align: center; margin-bottom: 4rem;">These are not services. They are leverage points into the systems that determine how you feel, think, and function.</p>
+
+            <div class="modalities-grid">
+                <div class="modality-card">
+                    <div class="modality-number">01</div>
+                    <h3>Neurofeedback</h3>
+                    <h4>Brain Training</h4>
+                    <p>Using real-time brainwave feedback, neurofeedback trains the brain's own regulatory capacity from the inside — not managing symptoms, but rewiring the patterns underneath them. The nervous system learns a new baseline: more regulated, more resilient, more available. You think more clearly. You feel more like yourself. The static quiets.</p>
+                    <div class="impact">Your mind becomes a clearer instrument for everything you are here to create.</div>
+                </div>
+
+                <div class="modality-card">
+                    <div class="modality-number">02</div>
+                    <h3>Microcirculation Optimization</h3>
+                    <h4>Cellular Foundation</h4>
+                    <p>At the foundation of every system in the body — energy, recovery, cognitive function, cellular regeneration — is microcirculation: the movement of blood through the smallest vessels that reach every tissue. Clinically delivered sessions optimize this circulation at a physiological level, restoring the body's capacity to fuel, repair, and perform in ways that feel, to most people, like turning a light back on.</p>
+                    <div class="impact">Your body remembers what vitality actually feels like — and begins to expect it.</div>
+                </div>
+
+                <div class="modality-card">
+                    <div class="modality-number">03</div>
+                    <h3>Rolfing Structural Integration</h3>
+                    <h4>Movement Practice</h4>
+                    <p>Rolfing reorganizes the body's structural relationships — releasing decades of held tension, compensation, and bracing stored in connective tissue — and then teaches the body how to move differently. Movement practice with Rosie builds strength, ease, and functionality into the new normal in daily life. The body finds its length, its ease, its ground.</p>
+                    <div class="impact">You inhabit your body — and your space — with a new kind of authority and ease.</div>
+                </div>
+            </div>
+
+            <p style="font-family: 'Jost', sans-serif; font-weight: 300; font-size: 1.05rem; line-height: 1.75; color: var(--stone); max-width: 900px; margin: 4rem auto 0; text-align: center;">Neurofeedback supports the brain's regulatory patterns. Microcirculation supports oxygen delivery, cellular energy, and recovery. Structural integration helps the body release long-held bracing and reorganize around greater ease. Together, they address the nervous system, cellular foundation, and physical architecture at the same time.</p>
+        </div>
+    </section>
+
+    <!-- Connectivity -->
+    <section class="connectivity-section">
+        <div class="section-content">
+            <div class="section-label">The Shape of Transformation</div>
+            <h2 class="section-title">Connectivity: Within, Between & Among</h2>
+            
+            <div class="connectivity-intro">
+                <p>Transformation doesn't happen in isolation. It moves in three directions at once — and this weekend is designed to open all three.</p>
+            </div>
+
+            <div class="connectivity-grid">
+                <div class="connectivity-card">
+                    <div class="connectivity-icon">◆</div>
+                    <h3>Within</h3>
+                    <h4>Returning to Yourself</h4>
+                    <p>The clinical work creates the conditions for genuine self-discovery — not as concept, but as felt experience. Old ways of holding, bracing, and contracting begin to release. What remains is more essentially you: your authentic presence, your personal power, the charisma that radiates from a body and nervous system that are no longer at war with themselves. You come home to yourself — and begin to act from that ground.</p>
+                </div>
+
+                <div class="connectivity-card">
+                    <div class="connectivity-icon">◆</div>
+                    <h3>Between</h3>
+                    <h4>What Forms Between People</h4>
+                    <p>A small group of people, each choosing to invest in themselves at this level, creates something rare: the conditions for authentic relationship. Not networking. Not performance. The kind of connection that forms when people are genuinely present, genuinely open, and moving through something real together. The relationships that begin here have a particular quality — because they begin in honesty.</p>
+                </div>
+
+                <div class="connectivity-card">
+                    <div class="connectivity-icon">◆</div>
+                    <h3>Among</h3>
+                    <h4>The Collective That Emerges</h4>
+                    <p>There is something that becomes available when a group of aligned people open together — a collective intelligence, a shared field, a sense of what is possible that exceeds what any individual could arrive at alone. The forest, the art, the nature, the conversations that move between sessions — these are not the backdrop. They are the medium through which something larger than any one person comes into view.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Group Process -->
+    <section class="process-section">
+        <div class="section-content">
+            <div class="section-label">Woven Throughout</div>
+            <h2 class="section-title">A Process of Group Unfoldment</h2>
+            
+            <div class="process-intro">
+                <p style="font-style: italic; text-align: center; font-size: 1.15rem;">This is what helps the work continue after you leave.</p>
+                
+                <p>Woven around and between every clinical session is a living group process — choreographed conversations that use art, nature, and intentional exchange as the medium. This process is not separate from the bodywork. It is what allows the bodywork to land more deeply, to integrate more fully, and to connect to purpose.</p>
+
+                <p>As the body opens physiologically, the process creates the relational and expressive space for what emerges to be witnessed, spoken, and grounded. Empowerment-based and emergent — guided without being prescribed. What unfolds does so because the conditions are right for it.</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-item">
+                    <div class="process-roman">I</div>
+                    <div class="process-content">
+                        <h3>Art & Nature as Language</h3>
+                        <p>Some of what shifts this weekend does not have words yet. The land, creative expression, and the natural world offer a different kind of language — one the body already speaks. These become the medium through which inner shifts find outward form.</p>
+                    </div>
+                </div>
+
+                <div class="process-item">
+                    <div class="process-roman">II</div>
+                    <div class="process-content">
+                        <h3>Choreographed Exchange</h3>
+                        <p>Conversations between participants are not left to chance. Intentional exchange processes create the conditions for depth, honesty, and genuine recognition — so that what emerges between people is as meaningful as what emerges within them.</p>
+                    </div>
+                </div>
+
+                <div class="process-item">
+                    <div class="process-roman">III</div>
+                    <div class="process-content">
+                        <h3>Grounded, Aligned Action</h3>
+                        <p>Unfoldment without direction is just release. This process supports each person in connecting what is opening in the body and in relationship to what is theirs to do — the work, the life, the relationships, the contribution that belong to them specifically. Clarity. Alignment. Action from the inside out.</p>
+                    </div>
+                </div>
+
+                <div class="process-item">
+                    <div class="process-roman">IV</div>
+                    <div class="process-content">
+                        <h3>Opening to What Is Possible</h3>
+                        <p>The body's capacity to receive — prosperity, connection, opportunity, love — expands as its contractions release. The process makes visible what was previously blocked from view, and creates the inner ground to walk toward it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Becomes Possible -->
+    <section class="possible-section">
+        <div class="section-content">
+            <div class="section-label">What Becomes Possible</div>
+            <h2 class="section-title">When Your Body Opens, Everything Opens</h2>
+
+            <div class="possible-grid">
+                <div class="possible-card">
+                    <h3>I</h3>
+                    <h4>Presence & Authenticity</h4>
+                    <p>When the nervous system is regulated and the body is no longer bracing, you stop performing. What emerges is the version of you that is simply, genuinely, undeniably present — and that presence changes every room you walk into.</p>
+                </div>
+
+                <div class="possible-card">
+                    <h3>II</h3>
+                    <h4>Personal Power</h4>
+                    <p>Personal power is not a personality trait. It is a physiological state — it radiates from a body that is regulated, structurally grounded, and fully alive. This weekend works directly on the biology underneath it. Your own power, from the inside out.</p>
+                </div>
+
+                <div class="possible-card">
+                    <h3>III</h3>
+                    <h4>Opening to Prosperity</h4>
+                    <p>The body carries the contractions that limit what we allow ourselves to receive. When those contractions release — physiologically, neurologically, structurally — the capacity to receive expands. New possibilities become visible that were simply not there before.</p>
+                </div>
+
+                <div class="possible-card">
+                    <h3>IV</h3>
+                    <h4>Letting Go, Birthing the New</h4>
+                    <p>Old patterns live in the body — in posture, in bracing, in the nervous system's learned vigilance. This weekend creates the conditions for those patterns to genuinely release, making space for who you are becoming. Not who you were. Who you are.</p>
+                </div>
+
+                <div class="possible-card">
+                    <h3>V</h3>
+                    <h4>Clarity & Aligned Action</h4>
+                    <p>Grounded, aligned action becomes possible when the body is regulated, the mind is clear, and the connection to purpose is restored. This weekend reconnects you to the specific contribution that belongs to you — and gives you the physiological ground to act from it.</p>
+                </div>
+
+                <div class="possible-card">
+                    <h3>VI</h3>
+                    <h4>Your Body's Radiance</h4>
+                    <p>When circulation is optimized, the nervous system is regulated, and the structure is aligned, the body does not just function better — it shines. You feel it. Others see it. This is what it looks like to optimize your body's capacity to express who you actually are.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule -->
+    <section class="schedule-section">
+        <div class="section-content">
+            <div class="section-label">How This Experience Unfolds</div>
+            <h2 class="section-title">Three Days, Choreographed with Care</h2>
+            
+            <div class="schedule-intro">
+                <p>Structured enough to guide you. Open enough for what needs to emerge.</p>
+                <p>Each day is held within a rhythm of microcirculation sessions that open and close the body's capacity for each day's work. A living group process — through art, nature, and intentional exchange — moves between clinical sessions, holding the arc of collective unfoldment. Space is left, by design, for what cannot be scheduled.</p>
+            </div>
+
+            <div class="days-grid">
+                <div class="day-card">
+                    <div class="day-header">
+                        <div class="day-title">Friday</div>
+                        <div class="day-date">May 29</div>
+                    </div>
+                    <div class="day-subtitle">Arrival & First Opening</div>
+                    <ul class="session-list">
+                        <li class="session-item">
+                            <h4>Welcome and Orientation</h4>
+                            <p>The clinical arc, the intention, the shape of the container</p>
+                        </li>
+                        <li class="session-item">
+                            <h4>Microcirculation Session</h4>
+                            <p>Preparing the body and the system for what is coming</p>
+                        </li>
+                        <li class="session-item">
+                            <h4>Movement Practice with Rosie</h4>
+                            <p>Orienting the body, finding length and ease as the group settles in</p>
+                        </li>
+                        <li class="session-item">
+                            <h4>First Group Process Session</h4>
+                            <p>Arriving into presence — and into relationship with the others here</p>
+                        </li>
+                        <li class="session-item">
+                            <h4>Nature-Based Exchange</h4>
+                            <p>The group begins to find its ground together</p>
+                        </li>
+                        <li class="session-item">
+                            <h4>Closing Microcirculation</h4>
+                            <p>Ease the nervous system into the forest and into rest</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header">
+                        <div class="day-title">Saturday</div>
+                        <div class="day-date">May 30</div>
+                    </div>
+                    <div class="day-subtitle">Deep Recalibration</div>
+                    <ul class="session-list">
+                        <li class="session-item">
+                            <h4>Morning Microcirculation</h4>
+                            <p>Open the day and activate the system</p>
+                        </li>
+                        <li class="session-item">
+                            <h4>Structural Alignment Movement Practice with Rosie</h4>
+                            <p>Orienting the body for the day's deeper work</p>
+                        </li>
+                        <li class="session-item">
+                            <h4>Group Process: Art and Nature as Medium</h4>
+                            <p>What is releasing, what is emerging, what wants to be witnessed</p>
+                        </li>
+                        <li class="session-item">
+                            <h4>Neurofeedback Session with LoriGrace</h4>
+                            <p>Nervous system regulation and cognitive reset</p>
+                        </li>
+                        <li class="session-item">
+                            <h4>Open Time in the Landscape</h4>
+                            <p>Integration, rest, the reset only a forest provides</p>
+                        </li>
+                        <li class="session-item">
+                            <h4>Closing Microcirculation</h4>
+                            <p>Sealing the day's work into the body</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header">
+                        <div class="day-title">Sunday</div>
+                        <div class="day-date">May 31</div>
+                    </div>
+                    <div class="day-subtitle">Integration & Emergence</div>
+                    <ul class="session-list">
+                        <li class="session-item">
+                            <h4>Morning Microcirculation</h4>
+                            <p>Begin the final day fully open</p>
+                        </li>
+                        <li class="session-item">
+                            <h4>Final Neurofeedback Session with LoriGrace</h4>
+                            <p>Consolidating the nervous system's new baseline</p>
+                        </li>
+                        <li class="session-item">
+                            <h4>Closing Group Process</h4>
+                            <p>What shifted, what is grounded, what is now yours to carry forward</p>
+                        </li>
+                        <li class="session-item">
+                            <h4>Closing Circle</h4>
+                            <p>Within, between, and among: what formed here</p>
+                        </li>
+                        <li class="session-item">
+                            <h4>Closing Microcirculation</h4>
+                            <p>Departing with the system fully integrated and alive</p>
+                        </li>
+                        <li class="session-item">
+                            <h4>Personal Pathway Conversation with LoriGrace</h4>
+                            <p>What your continuation looks like to optimize your well-being</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guides -->
+    <section class="guides-section">
+        <div class="section-content">
+            <div class="section-label">Your Guides for the Weekend</div>
+            <h2 class="section-title">Decades of Clinical Depth. One Weekend.</h2>
+            
+            <p style="font-family: 'Jost', sans-serif; font-weight: 300; font-size: 1.1rem; line-height: 1.8; color: var(--stone); max-width: 850px; margin: 0 auto 4rem; text-align: center;">This is not a retreat with facilitators. It is a clinical immersion led by two of the most experienced practitioners in their fields — working in an intentionally choreographed collaboration.</p>
+
+            <div class="guides-grid">
+                <div class="guide-card">
+                    <h3>LoriGrace Kochevar</h3>
+                    <h4>MS · LPC · 35+ Years Clinical Practice</h4>
+                    <p style="font-weight: 400; color: var(--copper); margin-bottom: 2rem;">Lead Clinician · Host · Founder</p>
+                    
+                    <p>LoriGrace has spent more than three decades at the intersection of neurobiology, trauma resolution, and family systems — a clinician who never stopped asking why the body holds what it holds, and what it genuinely takes to release it.</p>
+
+                    <p>She founded Brighten Your Being and built the Regenerative Clinical Ecosystem at Dragonfly Ranch — because she believes real transformation requires the right setting, the right clinical depth, and the right human container.</p>
+
+                    <div class="guide-brings">
+                        <h5>What LoriGrace Brings</h5>
+                        <ul>
+                            <li>Neurofeedback that trains the brain's own regulatory capacity — a measurable, lasting shift in how the nervous system organizes itself</li>
+                            <li>Microcirculation optimization working at the cellular foundation — restoring energy, regeneration, and radiant vitality</li>
+                            <li>A trauma-informed clinical lens built over 35 years — so the entire weekend feels safe enough for genuine transformation</li>
+                            <li>The quality of seeing that only comes from decades of presence — meeting each person exactly where they are</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <h3>Rosalynde Sara Smith</h3>
+                    <h4>Certified Rolfer · Rolf Movement Practitioner</h4>
+                    <p style="font-weight: 400; color: var(--copper); margin-bottom: 2rem;">Weekend Collaborator · Structural Integration</p>
+                    
+                    <p>Structural Integration reorganizes the body's structural relationships — releasing decades of held tension, compensation, and bracing stored in connective tissue — and then teaches the body how to move differently. Movement practice with Rosie builds on each other, so that eventually ease becomes the new normal in daily life. The body finds its length, its ease, its ground.</p>
+
+                    <p>Rosie has been practicing since 2007, trained at the Dr. Ida Rolf Institute in Boulder. Nearly two decades across the Colorado Front Range — with a deep respect for the body's intelligence and a gift for helping people discover what structural ease actually feels like.</p>
+
+                    <div class="guide-brings">
+                        <h5>What Rosie Brings</h5>
+                        <ul>
+                            <li>Decompression of joints, nerves, muscles, and connective tissue — creating space where the body has been bracing for years</li>
+                            <li>Structural reorganization of the body's architecture — feet, pelvis, spine, shoulders, cranium — into a more naturally supported relationship with gravity</li>
+                            <li>Daily movement re-patterning that teaches the body to build on what the structural sessions open — so new alignment becomes the new normal</li>
+                            <li>A felt sense of ease, ground, and expanded physical presence — what many describe as feeling more themselves than they have in years</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="included-section">
+        <div class="section-content">
+            <div class="section-label">What's Included</div>
+            <h2 class="section-title">Everything You Need. Nothing to Arrange.</h2>
+
+            <div class="included-grid">
+                <div class="included-card">
+                    <div class="included-icon">🏡</div>
+                    <h3>Overnight Lodging at Dragonfly Ranch</h3>
+                    <p>A private forest-based residential setting designed to support nervous system regulation and restoration.</p>
+                </div>
+
+                <div class="included-card">
+                    <div class="included-icon">🍽️</div>
+                    <h3>Exquisite Chef-Prepared Meals</h3>
+                    <p>Nourishing, plant-forward meals prepared with care to support steady energy, metabolic balance, and deep restoration.</p>
+                </div>
+
+                <div class="included-card">
+                    <div class="included-icon">⚡</div>
+                    <h3>All Clinical Sessions</h3>
+                    <p>Neurofeedback, microcirculation optimization, and structural integration woven across the weekend.</p>
+                </div>
+
+                <div class="included-card">
+                    <div class="included-icon">🌲</div>
+                    <h3>Group Process & Forest Immersion</h3>
+                    <p>Small-group connection, art, nature, and guided exchange designed to help the work integrate.</p>
+                </div>
+
+                <div class="included-card">
+                    <div class="included-icon">🔄</div>
+                    <h3>Post-Weekend Integration Support</h3>
+                    <p>A guided integration call and simple follow-up education to help the recalibration continue after you leave.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Options -->
+    <section class="pricing-section">
+        <div class="section-content">
+            <div class="section-label">What Is Available at Dragonfly Ranch</div>
+            <h2 class="section-title">Choose the Depth That's Right for You</h2>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-badge">Upcoming</div>
+                    <h3>Regenerative Recalibration Weekend</h3>
+                    <div class="dates">May 1–3, 2026</div>
+                    
+                    <p>Three days at a private forest property near Boulder, Colorado. Neurofeedback, microcirculation optimization, Rolfing structural integration, and a living group process in nature. For people who have done the inner work and are ready for a body that can hold what they know.</p>
+
+                    <div class="price">$1,369</div>
+                    <div class="price-note">Introductory Investment · By Application</div>
+
+                    <ul class="pricing-features">
+                        <li>Overnight lodging at Dragonfly Ranch</li>
+                        <li>Exquisite chef-prepared meals</li>
+                        <li>Neurofeedback sessions</li>
+                        <li>Microcirculation optimization</li>
+                        <li>Structural integration movement work</li>
+                        <li>Small-group process & forest immersion</li>
+                        <li>Post-weekend integration support</li>
+                    </ul>
+
+                    <div class="pricing-note-box">
+                        If you continue into a full 5-Day Regenerative Immersion, $500 of your weekend investment applies toward that immersive.
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <a href="#apply" class="btn btn-primary">Apply to Join</a>
+                    </div>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-badge">Available Year-Round</div>
+                    <h3>5-Day Immersion</h3>
+                    <div class="dates">Next date: July 16–21, 2026</div>
+                    
+                    <p>A deeper residential experience for those ready for more. A full five days to go further into the work — structurally, neurologically, and in the living group field that forms at Dragonfly Ranch.</p>
+
+                    <div style="margin-top: 3rem; padding: 2rem; background: var(--parchment);">
+                        <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.2rem; color: var(--copper);">If you continue into a full 5-Day Regenerative Immersion, $500 of your weekend investment applies toward that immersive.</p>
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <a href="tel:970-352-8873" class="btn btn-secondary">Reach out directly to LoriGrace<br>970-352-8873</a>
+                    </div>
+                </div>
+            </div>
+
+            <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.25rem; line-height: 1.6; color: var(--stone); text-align: center; margin-top: 4rem; max-width: 900px; margin-left: auto; margin-right: auto;">This is a first taste — offered at an introductory investment, in a small enough container that it can be real. The full Regenerative Immersion goes deeper. But this weekend will show you what is possible within, between, and among. And that changes everything.</p>
+        </div>
+    </section>
+
+    <!-- Logistics -->
+    <section class="logistics-section">
+        <div class="section-content">
+            <div class="section-label">Logistics & Details</div>
+            <h2 class="section-title">What You Need to Know</h2>
+
+            <div class="logistics-grid">
+                <div class="logistics-item">
+                    <h3>Dates</h3>
+                    <p>May 29–31, 2025<br>Friday evening arrival through Sunday afternoon departure</p>
+                </div>
+
+                <div class="logistics-item">
+                    <h3>Location</h3>
+                    <p>Dragonfly Ranch<br>Private forested property, near Boulder, Colorado — directions upon enrollment</p>
+                </div>
+
+                <div class="logistics-item">
+                    <h3>Group Size</h3>
+                    <p>Intentionally Small<br>Strictly limited — because real intimacy and clinical depth both require it</p>
+                </div>
+
+                <div class="logistics-item">
+                    <h3>Investment</h3>
+                    <p>Introductory Pricing<br>A meaningful reduction from the full immersion — offered at this level by design</p>
+                </div>
+            </div>
+
+            <p style="font-family: 'Jost', sans-serif; font-weight: 300; font-size: 1.05rem; line-height: 1.75; color: var(--stone); max-width: 850px; margin: 4rem auto 0; text-align: center;">For some participants, this weekend is complete in itself. For others, it becomes the first doorway into the deeper 5-Day Regenerative Immersion. We will help you listen for what is true for your body — without pressure.</p>
+        </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="application-section" id="apply">
+        <div class="section-content">
+            <div class="section-label">After You Apply</div>
+            <h2 class="section-title">A Simple, Human Process</h2>
+
+            <div class="application-intro">
+                <p>Enrollment happens through conversation — not checkout.</p>
+            </div>
+
+            <div class="application-steps">
+                <div class="application-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Complete a Brief Fit Form</h3>
+                        <p>Just enough for us to understand where you are and what you are looking for</p>
+                    </div>
+                </div>
+
+                <div class="application-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>LoriGrace Reviews Your Application</h3>
+                        <p>And responds within 48 hours</p>
+                    </div>
+                </div>
+
+                <div class="application-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Invitation to a Short Conversation</h3>
+                        <p>If it appears aligned, you are invited into a short conversation — no pressure, no obligation, just a real exchange</p>
+                    </div>
+                </div>
+
+                <div class="application-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Enrollment Confirmed</h3>
+                        <p>After fit, investment, and logistics are complete — then you receive everything you need to arrive</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="final-cta-content">
+            <h2>If something in you knows it's time for more — <em>this is where that becomes real.</em></h2>
+            
+            <p>This is a small, intentionally curated group.<br>Enrollment happens through conversation — not checkout.</p>
+
+            <p>This is not a casual getaway. It is a small, all-inclusive residential recalibration for people ready to restore the biology beneath who they are becoming.</p>
+
+            <p>Enrollment is intentionally limited so each participant receives meaningful clinical attention and the group field can remain coherent.</p>
+
+            <div class="cta-buttons">
+                <a href="#apply" class="btn btn-primary">Apply to Join</a>
+            </div>
+
+            <p class="cta-note">Includes overnight lodging, exquisite chef-prepared meals, clinical sessions, group process, and integration support.</p>
+
+            <p class="cta-note">No pressure. No expectation. Just a conversation to see if this is the right fit for you.</p>
+
+            <div class="final-details">
+                May 29–31 · Dragonfly Ranch — Near Boulder, Colorado · Introductory Investment · Full Immersion Pathways Available After
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>Brighten Your Being</h3>
+        <p>Dragonfly Ranch · Near Boulder, Colorado</p>
+        <p class="tagline">Regenerative Clinical Ecosystem · brightenyourbeing.com</p>
+    </footer>
+
+    <script>
+        // Fade in elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all section content
+        document.querySelectorAll('.section-content, .modality-card, .connectivity-card, .possible-card, .day-card, .guide-card, .included-card, .pricing-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
