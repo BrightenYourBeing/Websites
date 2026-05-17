@@ -411,7 +411,7 @@ p:last-child { margin-bottom:0; }
 .modality-card:hover { background:#163A2E; }
 
 .modality-number {
-  font-family:'Cormorant Garamond',serif; font-size:48px; font-weight:300;
+  font-family:'Cormorant Garamond',serif; font-size:40px !important; font-weight:300;
   color:rgba(201,151,60,.2); line-height:1; margin-bottom:20px;
 }
 /* h3 — primary card heading */
