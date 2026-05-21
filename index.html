@@ -1,605 +1,485 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Regenerative Recalibration Weekend · Dragonfly Ranch</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="regenerativeweekend.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regenerative Recalibration Weekend · Dragonfly Ranch</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="regenerativeweekend.css">
 </head>
 <body>
 
-<div class="top-banner">Dragonfly Ranch &nbsp;·&nbsp; Near Boulder, Colorado &nbsp;·&nbsp; By Invitation</div>
-
-<nav class="site-nav" role="navigation" aria-label="Main navigation">
-  <div class="nav-logo" onclick="showPage('home')"> Brighten Your Being</div>
-  <ul class="nav-links">
-    <li><button onclick="showPage('home')"        data-page="home">Home</button></li>
-    <li><button onclick="showPage('experience')"  data-page="experience">The Experience</button></li>
-    <li><button onclick="showPage('modalities')"  data-page="modalities">The Modalities</button></li>
-    <li><button onclick="showPage('schedule')"    data-page="schedule">Schedule</button></li>
-    <li><button onclick="showPage('guides')"      data-page="guides">Your Guides</button></li>
-    <li><button onclick="showPage('investment')"  data-page="investment">Investment</button></li>
-    <li><button onclick="showPage('apply')" class="nav-apply" data-page="apply">Apply</button></li>
-  </ul>
-  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+<nav class="topbar">
+  <span class="topbar-brand">Brighten Your Being</span>
+  <span class="topbar-detail">Dragonfly Ranch · Boulder, Colorado · By Invitation</span>
+  <a href="https://info.brightenyourbeing.com/widget/survey/mQlZS0DzumYTQEh5eMrm" class="btn-primary" style="font-size:13px; padding:12px 28px;">Apply to Join</a>
 </nav>
 
-<div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
-  <button onclick="showPage('home');closeMobile()">Home</button>
-  <button onclick="showPage('experience');closeMobile()">The Experience</button>
-  <button onclick="showPage('modalities');closeMobile()">The Modalities</button>
-  <button onclick="showPage('schedule');closeMobile()">Schedule</button>
-  <button onclick="showPage('guides');closeMobile()">Your Guides</button>
-  <button onclick="showPage('investment');closeMobile()">Investment</button>
-  <a href="https://info.brightenyourbeing.com/widget/survey/8J2h2x6CcT0ioehCpc5W" class="mob-apply" target="_blank">Apply to Join</a>
-</div>
-
-<!-- ═══════════════
-     HOME
-═══════════════ -->
-<main class="page active" id="page-home">
-  <div class="hero-wrap">
-    <div class="hero-content">
-      <p class="hero-badge">May 29–31, 2026 · Dragonfly Ranch</p>
-      <!-- h1 — only one on the site -->
-      <h1>Regenerative<br><em>Recalibration</em><br>Weekend</h1>
-      <div class="hero-rule" aria-hidden="true"></div>
-      <p class="hero-lead">A 2.5-day all-inclusive residential clinical immersive for nervous system regulation, microcirculation optimization, structural integration, and embodied renewal.</p>
-      <div class="hero-details" aria-label="Key details">
-        <span>2.5-day residential experience</span>
-        <span>Lodging + chef-prepared meals included</span>
-        <span>$1,369 introductory investment</span>
-        <span>By application</span>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <h1 class="hero-title">
+        Regenerative<br>
+        <em>Recalibration</em><br>
+        Immersion
+      </h1>
+      <p class="hero-subhead">
+        The Threshold Weekend. The Full Immersion. Both Begin Here.<br>
+        For those who've done the inner work and are ready for the body to follow — a clinical immersive for nervous system regulation, structural integration, and embodied renewal.
+      </p>
+      <div class="hero-cta-row">
+        <a href="https://info.brightenyourbeing.com/widget/survey/mQlZS0DzumYTQEh5eMrm" class="btn-primary">Apply to Join</a>
+        <a href="#experience" class="btn-outline">Explore the Experience</a>
       </div>
-      <div class="hero-cta">
-        <a href="https://info.brightenyourbeing.com/widget/survey/8J2h2x6CcT0ioehCpc5W" class="btn-primary" target="_blank">Apply to Join</a>
-        <button class="btn-ghost" onclick="showPage('experience')">Explore the Experience</button>
+    </div>
+    <div class="hero-panel">
+      <div class="hero-panel-item">
+        <p class="panel-label">Dates</p>
+        <p class="panel-value">June 26–28, July 22–26</p>
+        <p class="panel-sub">2.5 Days or 5 — Begin Where You're Ready</p>
+      </div>
+      <div class="hero-panel-item">
+        <p class="panel-label">Location</p>
+        <p class="panel-value">Dragonfly Ranch</p>
+        <p class="panel-sub">Private forest property, 8 miles outside Boulder</p>
+      </div>
+      <div class="hero-panel-item">
+        <p class="panel-label">Enrollment</p>
+        <p class="panel-value">Intentionally Small</p>
+        <p class="panel-sub">By application</p>
+      </div>
+      <div class="hero-panel-item">
+        <p class="panel-label">Investment</p>
+        <p class="panel-value">Introductory Pricing</p>
+        <p class="panel-sub">A meaningful reduction from the full immersion</p>
       </div>
     </div>
   </div>
-  <footer class="site-footer">
-    <p class="footer-name">Brighten Your Being</p>
-    <p>Dragonfly Ranch · Near Boulder, Colorado</p>
-    <p class="tagline">Regenerative Clinical Ecosystem · brightenyourbeing.com</p>
-  </footer>
-</main>
+</section>
 
-<!-- ═══════════════
-     THE EXPERIENCE
-═══════════════ -->
-<div class="page" id="page-experience">
-  <div class="inner-narrow">
-    <p class="section-label">The World Is Moving Quickly</p>
-    <div class="big-question">There is a lot moving through life right now — uncertainty, pressure, change, responsibility, and the constant demand to keep <em>adapting.</em></div>
-    <p>Many people have learned to hold too much for too long. This weekend creates space to begin sensing what is truly yours to carry, what needs to be processed, and what your system is ready to release.</p>
-    <p>In moments like this, your capacity matters. Your clarity matters. Your energy matters. Your nervous system matters. Your ability to stay connected to yourself matters.</p>
-    <p>Your body is not a problem to fix. It is the system that determines what you can access, sustain, and create.</p>
-    <div class="pullquote"><p>Being who you are, fully, is not a luxury.<br>It is one of the most powerful investments you can make.</p></div>
-
+<section class="why-section" id="experience">
+  <div class="section-inner">
+    <p class="section-eyebrow fade-in">The Context</p>
     <hr class="divider">
-
-    <p class="section-label">A Question Worth Sitting With</p>
-    <h2 class="section-title">Is this the reset your body has been asking for?</h2>
-    <p style="text-align:center;">In a world asking more from your nervous system than ever before, the most important place to restore stability is inside your own body.</p>
-
-    <div class="question-pills">
-      <div class="question-pill">
-        <p class="pill-label">Energy</p>
-        <p>What would it feel like to have energy that actually stays?</p>
+    <div class="why-grid">
+      <div class="fade-in">
+        <h2 class="section-title">The Problem Isn't<br><em>You. It's the Approach.</em></h2>
+        <p class="section-body">The world is moving quickly. There is a lot moving through life right now — uncertainty, pressure, change, responsibility, and the constant demand to keep adapting.</p>
+        <br><br>
+        <p class="section-body">Many people have learned to hold too much for too long. This weekend creates space to begin sensing what is truly yours to carry, what needs to be processed, and what your system is ready to release.</p>
       </div>
-      <div class="question-pill">
-        <p class="pill-label">Nervous System</p>
-        <p>What if your nervous system could settle beneath everything you carry?</p>
-      </div>
-      <div class="question-pill">
-        <p class="pill-label">Clarity</p>
-        <p>What would change if your mind felt clearer and decisions felt clean instead of heavy?</p>
-      </div>
-      <div class="question-pill">
-        <p class="pill-label">Emotional Capacity</p>
-        <p>What if you could feel more — without becoming overwhelmed?</p>
-      </div>
-      <div class="question-pill">
-        <p class="pill-label">Capacity</p>
-        <p>What if the next level of your life doesn't require more effort, but more capacity?</p>
-      </div>
-      <div class="question-pill">
-        <p class="pill-label">Support</p>
-        <p>What would it feel like to not carry everything alone for a few days?</p>
-      </div>
-    </div>
-
-    <p class="closing-quote">If one or more of these questions lands in your body, this weekend may be the right next step.</p>
-    <p>This experience is designed for people who are functioning, but know their body, clarity, energy, or nervous system needs deeper support than everyday life allows.</p>
-    <div class="pullquote"><p>You don't need more insight. You need a system that can integrate what you already know.</p></div>
-
-    <hr class="divider">
-
-    <p class="section-label">Why This Works When Other Things Haven't</p>
-    <h2 class="section-title">The Problem Isn't <em>You.</em> It's the Approach.</h2>
-    <div class="two-col">
-      <div class="left">
-        <p>Most approaches try to change your life from the outside in: more mindset, more strategy, more effort. And for a while — it works. But it doesn't hold.</p>
-        <p>Because the underlying system hasn't changed.</p>
-        <p>Not forced. Not temporary. Not dependent on willpower.</p>
-      </div>
-      <div>
-        <div class="why-highlight">This work is different. It supports the conditions inside your body so change has somewhere to land.</div>
-        <button class="btn-secondary" onclick="showPage('modalities')">Explore the Modalities →</button>
+      <div class="fade-in">
+        <p class="why-quote">"Your body is not a problem to fix. It is the system that determines what you can access, sustain, and create."</p>
+        <br><br>
+        <p class="section-body">Most approaches try to change your life from the outside in: more mindset, more strategy, more effort. And for a while — it works. But it doesn't hold. Because the underlying system hasn't changed.</p>
+        <br>
+        <p class="section-body">This work is different. It supports the conditions inside your body so change has somewhere to land. Not forced. Not temporary. Not dependent on willpower.</p>
       </div>
     </div>
   </div>
-  <footer class="site-footer">
-    <p class="footer-name">Brighten Your Being</p>
-    <p>Dragonfly Ranch · Near Boulder, Colorado</p>
-    <p class="tagline">Regenerative Clinical Ecosystem · brightenyourbeing.com</p>
-  </footer>
-</div>
+</section>
 
-<!-- ═══════════════
-     THE MODALITIES
-═══════════════ -->
-<div class="page" id="page-modalities">
-  <div class="inner">
-    <p class="section-label">The Clinical Foundation</p>
-    <h2 class="section-title light">Three Modalities. <em>One Extraordinary Combination.</em></h2>
-    <p style="text-align:center;max-width:680px;margin:0 auto;color:rgba(252,250,245,.8);">Each one is powerful on its own. Together — in this sequence, in this setting — they create something most people have never experienced and most will never forget.</p>
-    <p style="text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--gold-light);margin:1rem auto 0;max-width:680px;">These are not services. They are leverage points into the systems that determine how you feel, think, and function.</p>
+<section class="questions-section">
+  <div class="section-inner">
+    <p class="section-eyebrow fade-in">A Question Worth Sitting With</p>
+    <h2 class="section-title fade-in">Is this the reset your<br><em>body has been asking for?</em></h2>
+    <p class="section-body fade-in" style="max-width:680px; margin-bottom:0;">In a world asking more from your nervous system than ever before, the most important place to restore stability is inside your own body.</p>
+    <div class="questions-grid">
+      <div class="question-card fade-in">
+        <span class="question-label">Energy</span>
+        <p class="question-body">How extraordinary would it be to have energy that actually stays — energy you can count on, not just borrow from tomorrow?</p>
+      </div>
+      <div class="question-card fade-in">
+        <span class="question-label">Nervous System</span>
+        <p class="question-body">Can you imagine the relief of a nervous system that could settle beneath everything you carry — steady, regulated, resilient?</p>
+      </div>
+      <div class="question-card fade-in">
+        <span class="question-label">Clarity</span>
+        <p class="question-body">Wouldn't it be magnificent if your mind felt clearer and decisions felt clean instead of heavy — seeing what matters without the fog?</p>
+      </div>
+      <div class="question-card fade-in">
+        <span class="question-label">Emotional Capacity</span>
+        <p class="question-body">How lovely would it be to feel more — the full spectrum of what moves through you — without becoming overwhelmed by any of it?</p>
+      </div>
+      <div class="question-card fade-in">
+        <span class="question-label">Support</span>
+        <p class="question-body">Can you imagine a weight lifted from your shoulders — not carrying everything alone for a few days, held by something real?</p>
+      </div>
+      <div class="question-card fade-in">
+        <span class="question-label">Capacity</span>
+        <p class="question-body">How fulfilling would it be to discover that the next level of your life doesn't require more effort — but more capacity to hold what's already here?</p>
+      </div>
+    </div>
+    <div class="questions-footer fade-in">
+      <p>If one or more of these questions <strong>lands in your body</strong>, this weekend may be the right next step.</p>
+      <p style="margin-top:1rem;">You don't need more insight. <em>You need a system that can integrate what you already know.</em></p>
+    </div>
+  </div>
+</section>
 
+<section class="modalities-section">
+  <div class="section-inner">
+    <p class="section-eyebrow fade-in">The Clinical Foundation</p>
+    <h2 class="section-title fade-in">Three Modalities.<br><em>One Extraordinary Combination.</em></h2>
+    <p class="section-body fade-in">Each one is powerful on its own. Together — in this sequence, in this setting — they create something most people have never experienced and most will never forget. These are not services. They are leverage points into the systems that determine how you feel, think, and function.</p>
     <div class="modalities-grid">
-      <div class="modality-card">
-        <p class="modality-number" aria-hidden="true">01</p>
-        <h3>Neurofeedback</h3>
-        <h4>Brain Training</h4>
-        <p>Using real-time brainwave feedback, neurofeedback trains the brain's own regulatory capacity from the inside — not managing symptoms, but rewiring the patterns underneath them. The nervous system learns a new baseline: more regulated, more resilient, more available.</p>
-        <p class="impact">Your mind becomes a clearer instrument for everything you are here to create.</p>
+      <div class="modality-card fade-in">
+        <h3 class="modality-title">Neurofeedback<br>Brain Training</h3>
+        <p class="modality-body">Using real-time brainwave feedback, neurofeedback trains the brain's own regulatory capacity from the inside — not managing symptoms, but rewiring the patterns underneath them. The nervous system learns a new baseline: more regulated, more resilient, more available. You think more clearly. You feel more like yourself. The static quiets.</p>
+        <p class="modality-close">Your mind becomes a clearer instrument for everything you are here to create.</p>
       </div>
-      <div class="modality-card">
-        <p class="modality-number" aria-hidden="true">02</p>
-        <h3>Microcirculation Optimization</h3>
-        <h4>Cellular Foundation</h4>
-        <p>At the foundation of every system in the body — energy, recovery, cognitive function, cellular regeneration — is microcirculation. Clinically delivered sessions optimize this circulation at a physiological level, restoring the body's capacity to fuel, repair, and perform in ways that feel, to most people, like turning a light back on.</p>
-        <p class="impact">Your body remembers what vitality actually feels like — and begins to expect it.</p>
+      <div class="modality-card fade-in">
+        <h3 class="modality-title">Microcirculation<br>Optimization</h3>
+        <p class="modality-body">At the foundation of every system in the body — energy, recovery, cognitive function, cellular regeneration — is microcirculation: the movement of blood through the smallest vessels that reach every tissue. Clinically delivered sessions optimize this circulation at a physiological level, restoring the body's capacity to fuel, repair, and perform in ways that feel, to most people, like turning a light back on.</p>
+        <p class="modality-close">Your body remembers what vitality actually feels like — and begins to expect it.</p>
       </div>
-      <div class="modality-card">
-        <p class="modality-number" aria-hidden="true">03</p>
-        <h3>SOMArticulate Movement Practice</h3>
-        <h4>Structural Integration</h4>
-        <p>Rolf-based functional movement reorganizes the body's structural relationships — releasing decades of held tension, compensation, and bracing stored in connective tissue — then teaches the body how to move differently. Each progressive session builds strength, ease, and functional alignment into daily life.</p>
-        <p class="impact">You inhabit your body — and your space — with a new kind of authority and ease.</p>
+      <div class="modality-card fade-in">
+        <h3 class="modality-title">SOMArticulate<br>Structural Integration Based Movement</h3>
+        <p class="modality-body">This is a Rolf-based functional movement practice that reorganizes the body's structural relationships. It retrains the body to release decades of held tension, compensation, and bracing stored in the connective tissue, then teaches it to move in new, more efficient ways. Through precise, repeatable exercises, the practice builds strength, ease, and functional alignment into daily movement.</p>
+        <p class="modality-close">Clients stand, walk, and move with clearer authority and effortless presence.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <hr class="divider-dark">
-
-    <p class="section-label">The Shape of Transformation</p>
-    <h2 class="section-title light">Connectivity: <em>Within, Between &amp; Among</em></h2>
-    <p style="text-align:center;max-width:640px;margin:0 auto;color:rgba(252,250,245,.8);">Transformation doesn't happen in isolation. It moves in three directions at once — and this weekend is designed to open all three.</p>
-
+<section class="connectivity-section">
+  <div class="section-inner">
+    <p class="section-eyebrow fade-in">The Shape of Transformation</p>
+    <h2 class="section-title fade-in">Connectivity<br><em>Within, Between &amp; Among</em></h2>
+    <p class="section-body fade-in">Transformation doesn't happen in isolation. It moves in three directions at once — and this weekend is designed to open all three.</p>
     <div class="connectivity-grid">
-      <div class="connectivity-card">
-        <p class="icon-label">I</p>
-        <h3>Within</h3>
-        <h4>Returning to Yourself</h4>
-        <p>The clinical work creates the conditions for genuine self-discovery — not as concept, but as felt experience. Old ways of holding, bracing, and contracting begin to release. What remains is more essentially you.</p>
+      <div class="conn-card fade-in">
+        <p class="conn-direction">Within</p>
+        <p class="conn-subtitle">Returning to Yourself</p>
+        <p class="conn-body">The clinical work creates the conditions for genuine self-discovery — not as concept, but as felt experience. Old ways of holding, bracing, and contracting begin to release. What remains is more essentially you: your authentic presence, your personal power, the charisma that radiates from a body and nervous system that are no longer at war with themselves. You come home to yourself — and begin to act from that ground.</p>
       </div>
-      <div class="connectivity-card">
-        <p class="icon-label">II</p>
-        <h3>Between</h3>
-        <h4>What Forms Between People</h4>
-        <p>A small group of people, each choosing to invest in themselves at this level, creates something rare: the conditions for authentic relationship. Not networking. Not performance. The kind of connection that forms when people are genuinely present.</p>
+      <div class="conn-card fade-in">
+        <p class="conn-direction">Between</p>
+        <p class="conn-subtitle">What Forms Between People</p>
+        <p class="conn-body">A small group of people, each choosing to invest in themselves at this level, creates something rare: the conditions for authentic relationship. Not networking. Not performance. The kind of connection that forms when people are genuinely present, genuinely open, and moving through something real together. The relationships that begin here have a particular quality — because they begin in honesty.</p>
       </div>
-      <div class="connectivity-card">
-        <p class="icon-label">III</p>
-        <h3>Among</h3>
-        <h4>The Collective That Emerges</h4>
-        <p>There is something that becomes available when a group of aligned people open together — a collective intelligence, a shared field. The forest, the art, the nature, the conversations — these are not the backdrop. They are the medium.</p>
+      <div class="conn-card fade-in">
+        <p class="conn-direction">Among</p>
+        <p class="conn-subtitle">The Collective That Emerges</p>
+        <p class="conn-body">There is something that becomes available when a group of aligned people open together — a collective intelligence, a shared field, a sense of what is possible that exceeds what any individual could arrive at alone. The forest, the art, the nature, the conversations that move between sessions — these are not the backdrop. They are the medium through which something larger than any one person comes into view.</p>
       </div>
-    </div>
-
-    <hr class="divider-dark">
-
-    <p class="section-label">Woven Throughout</p>
-    <h2 class="section-title light">A Process of <em>Group Unfoldment</em></h2>
-    <p style="text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--gold-light);max-width:640px;margin:0 auto 1.5rem;">This is what helps the work continue after you leave.</p>
-    <p style="text-align:center;max-width:640px;margin:0 auto;color:rgba(252,250,245,.8);">Woven around and between every clinical session is a living group process — choreographed conversations that use art, nature, and intentional exchange as the medium.</p>
-
-    <div class="process-list">
-      <div class="process-item">
-        <p class="process-roman" aria-hidden="true">I</p>
-        <div class="process-content">
-          <h3>Art &amp; Nature as Language</h3>
-          <p>Some of what shifts this weekend does not have words yet. The land, creative expression, and the natural world offer a different kind of language — one the body already speaks.</p>
-        </div>
-      </div>
-      <div class="process-item">
-        <p class="process-roman" aria-hidden="true">II</p>
-        <div class="process-content">
-          <h3>Choreographed Exchange</h3>
-          <p>Conversations between participants are not left to chance. Intentional exchange processes create the conditions for depth, honesty, and genuine recognition.</p>
-        </div>
-      </div>
-      <div class="process-item">
-        <p class="process-roman" aria-hidden="true">III</p>
-        <div class="process-content">
-          <h3>Grounded, Aligned Action</h3>
-          <p>Unfoldment without direction is just release. This process supports each person in connecting what is opening in the body to what is theirs to do — the work, the life, the relationships, the contribution that belong to them specifically.</p>
-        </div>
-      </div>
-      <div class="process-item">
-        <p class="process-roman" aria-hidden="true">IV</p>
-        <div class="process-content">
-          <h3>Opening to What Is Possible</h3>
-          <p>The body's capacity to receive — prosperity, connection, opportunity, love — expands as its contractions release. The process makes visible what was previously blocked from view.</p>
-        </div>
-      </div>
-    </div>
-
-    <div style="text-align:center;margin-top:3rem;">
-      <button class="btn-ghost" onclick="showPage('schedule')">See the Schedule →</button>
     </div>
   </div>
-  <footer class="site-footer">
-    <p class="footer-name">Brighten Your Being</p>
-    <p>Dragonfly Ranch · Near Boulder, Colorado</p>
-    <p class="tagline">Regenerative Clinical Ecosystem · brightenyourbeing.com</p>
-  </footer>
-</div>
+</section>
 
-<!-- ═══════════════
-     SCHEDULE
-═══════════════ -->
-<div class="page" id="page-schedule">
-  <div class="inner">
-    <p class="section-label">How This Experience Unfolds</p>
-    <h2 class="section-title light">Three Days, <em>Choreographed with Care</em></h2>
-    <p style="max-width:680px;margin:0 auto;text-align:center;color:rgba(252,250,245,.8);">Structured enough to guide you. Open enough for what needs to emerge. Each day is held within a rhythm of microcirculation sessions that open and close the body's capacity for each day's work.</p>
-
-    <div class="days-grid">
-      <div class="day-card">
-        <div class="day-header">
-          <p class="day-title">Friday</p>
-          <p class="day-date">May 29</p>
+<section class="process-section">
+  <div class="section-inner">
+    <p class="section-eyebrow fade-in">Woven Throughout</p>
+    <h2 class="section-title fade-in">A Process of<br><em>Group Unfoldment</em></h2>
+    <div class="process-grid">
+      <div class="process-items">
+        <div class="process-item fade-in">
+          <div>
+            <p class="process-item-title">Art &amp; Nature as Language</p>
+            <p class="process-item-body">Some of what shifts this weekend does not have words yet. The land, creative expression, and the natural world offer a different kind of language — one the body already speaks. These become the medium through which inner shifts find outward form.</p>
+          </div>
         </div>
-        <p class="day-subtitle">Arrival &amp; First Opening</p>
-        <ul class="session-list">
-          <li class="session-item"><div><h4>Welcome and Orientation</h4><p>The clinical arc, the intention, the shape of the container</p></div></li>
-          <li class="session-item"><div><h4>Microcirculation Session</h4><p>Preparing the body and the system for what is coming</p></div></li>
-          <li class="session-item"><div><h4>Movement Practice with Rosie</h4><p>Orienting the body, finding length and ease as the group settles in</p></div></li>
-          <li class="session-item"><div><h4>First Group Process Session</h4><p>Arriving into presence — and into relationship with the others here</p></div></li>
-          <li class="session-item"><div><h4>Nature-Based Exchange</h4><p>The group begins to find its ground together</p></div></li>
-          <li class="session-item"><div><h4>Closing Microcirculation</h4><p>Ease the nervous system into the forest and into rest</p></div></li>
-        </ul>
-      </div>
-      <div class="day-card">
-        <div class="day-header">
-          <p class="day-title">Saturday</p>
-          <p class="day-date">May 30</p>
+        <div class="process-item fade-in">
+          <div>
+            <p class="process-item-title">Choreographed Exchange</p>
+            <p class="process-item-body">Conversations between participants are not left to chance. Intentional exchange processes create the conditions for depth, honesty, and genuine recognition — so that what emerges between people is as meaningful as what emerges within them.</p>
+          </div>
         </div>
-        <p class="day-subtitle">Deep Recalibration</p>
-        <ul class="session-list">
-          <li class="session-item"><div><h4>Morning Microcirculation</h4><p>Open the day and activate the system</p></div></li>
-          <li class="session-item"><div><h4>Structural Alignment Movement with Rosie</h4><p>Orienting the body for the day's deeper work</p></div></li>
-          <li class="session-item"><div><h4>Group Process: Art and Nature as Medium</h4><p>What is releasing, what is emerging, what wants to be witnessed</p></div></li>
-          <li class="session-item"><div><h4>Neurofeedback Session with LoriGrace</h4><p>Nervous system regulation and cognitive reset</p></div></li>
-          <li class="session-item"><div><h4>Open Time in the Landscape</h4><p>Integration, rest, the reset only a forest provides</p></div></li>
-          <li class="session-item"><div><h4>Closing Microcirculation</h4><p>Sealing the day's work into the body</p></div></li>
-        </ul>
-      </div>
-      <div class="day-card">
-        <div class="day-header">
-          <p class="day-title">Sunday</p>
-          <p class="day-date">May 31</p>
+        <div class="process-item fade-in">
+          <div>
+            <p class="process-item-title">Grounded, Aligned Action</p>
+            <p class="process-item-body">Unfoldment without direction is just release. This process supports each person in connecting what is opening in the body and in relationship to what is theirs to do — the work, the life, the relationships, the contribution that belongs to them specifically. Clarity. Alignment. Action from the inside out.</p>
+          </div>
         </div>
-        <p class="day-subtitle">Integration &amp; Emergence</p>
-        <ul class="session-list">
-          <li class="session-item"><div><h4>Morning Microcirculation</h4><p>Begin the final day fully open</p></div></li>
-          <li class="session-item"><div><h4>Final Neurofeedback with LoriGrace</h4><p>Consolidating the nervous system's new baseline</p></div></li>
-          <li class="session-item"><div><h4>Closing Group Process</h4><p>What shifted, what is grounded, what is now yours to carry forward</p></div></li>
-          <li class="session-item"><div><h4>Closing Circle</h4><p>Within, between, and among: what formed here</p></div></li>
-          <li class="session-item"><div><h4>Closing Microcirculation</h4><p>Departing with the system fully integrated and alive</p></div></li>
-          <li class="session-item"><div><h4>Personal Pathway Conversation</h4><p>What your continuation looks like to optimize your well-being</p></div></li>
-        </ul>
-      </div>
-    </div>
-
-    <div style="text-align:center;margin-top:3rem;">
-      <button class="btn-ghost" onclick="showPage('guides')">Meet Your Guides →</button>
-    </div>
-  </div>
-  <footer class="site-footer">
-    <p class="footer-name">Brighten Your Being</p>
-    <p>Dragonfly Ranch · Near Boulder, Colorado</p>
-    <p class="tagline">Regenerative Clinical Ecosystem · brightenyourbeing.com</p>
-  </footer>
-</div>
-
-<!-- ═══════════════
-     GUIDES
-═══════════════ -->
-<div class="page" id="page-guides">
-  <div class="inner">
-    <p class="section-label">Your Guides for the Weekend</p>
-    <h2 class="section-title">Decades of Clinical <em>Depth. One Weekend.</em></h2>
-    <p style="text-align:center;max-width:680px;margin:0 auto;">This is not a retreat with facilitators. It is a clinical immersion led by two of the most experienced practitioners in their fields — working in an intentionally choreographed collaboration.</p>
-
-    <!-- Two guide bios side by side -->
-    <div class="guides-grid">
-
-      <!-- LoriGrace -->
-      <div class="guide-card">
-        <div class="guide-photo">
-  <img src="LoriGrace.png" alt="LoriGrace Kochevar" />
-</div>
-        <p class="cred">MS · LPC · 35+ Years Clinical Practice</p>
-        <h2>LoriGrace Kochevar</h2>
-        <span class="guide-role">Lead Clinician · Host · Founder</span>
-        <p>LoriGrace has spent more than three decades at the intersection of neurobiology, trauma resolution, and family systems — a clinician who never stopped asking why the body holds what it holds, and what it genuinely takes to release it.</p>
-        <p>She founded Brighten Your Being and built the Regenerative Clinical Ecosystem at Dragonfly Ranch — because she believes real transformation requires the right setting, the right clinical depth, and the right human container.</p>
-        <div class="guide-brings">
-          <h3>What LoriGrace Brings</h3>
-          <ul>
-            <li><p>Neurofeedback that trains the brain's own regulatory capacity — a measurable, lasting shift in how the nervous system organizes itself</p></li>
-            <li><p>Microcirculation optimization working at the cellular foundation — restoring energy, regeneration, and radiant vitality</p></li>
-            <li><p>A trauma-informed clinical lens built over 35 years — so the entire weekend feels safe enough for genuine transformation</p></li>
-            <li><p>The quality of seeing that only comes from decades of presence — meeting each person exactly where they are</p></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Rosie -->
-      <div class="guide-card">
-<div class="guide-photo">
-  <img src="Rosalynde.png" alt="Rosalynde Smith" />
-</div>
-        <p class="cred">Certified Rolfer · Rolf Movement Practitioner</p>
-        <h2>Rosalynde Smith</h2>
-        <span class="guide-role">Weekend Collaborator · SOMArticulate Movement Practice</span>
-        <p>Rosalynde is a certified Rolfer and Rolf Movement Practitioner with nearly twenty years of experience, trained at the Dr. Ida Rolf Institute in Boulder. Her multimodal practice focuses on Structural Integration through bodywork, combined with Rolf Movement and SI-inspired movement repatterning.</p>
-        <p>During our Immersions, we focus on movement — practical, progressive work rooted in Rolf principles that reorganizes how you stand, walk, and inhabit your body in daily life.</p>
-        <div class="guide-brings">
-          <h3>Movement Goals for the Weekend</h3>
-          <ul>
-            <li><p>Reorganize weight and support through your feet and legs for a stable, grounded base</p></li>
-            <li><p>Align your pelvis, spine, and shoulders so gravity works with you instead of against you</p></li>
-            <li><p>Release habitual bracing in the neck, jaw, and arms</p></li>
-            <li><p>Build smoother coordination between your head, torso, and limbs</p></li>
-          </ul>
-        </div>
-      </div>
-
-    </div><!-- /guides-grid -->
-
-    <!-- SOMArticulate — full width below both bios -->
-    <div class="somarticulate-section">
-      <p class="section-label">The Practice</p>
-      <h2>SOMArticulate <em style="font-style:italic;color:var(--sage);">&amp; SOMArtMoves</em></h2>
-      <span class="somarticulate-aka">Rolf-based functional movement · led by Rosalynde Smith</span>
-
-      <div class="somarticulate-body">
-        <div>
-          <h3>What It Is</h3>
-          <p>SOMArticulate is a Rolf-based functional movement practice that reorganizes the body's structural relationships. It retrains the body to release decades of held tension, compensation, and bracing stored in the connective tissue — then teaches it to move in new, more efficient ways.</p>
-          <p>Through precise, repeatable exercises, the practice builds strength, ease, and functional alignment into daily movement. Each session builds on the last. The patterns are concrete and functional — designed to become your new normal during daily activities.</p>
-          <p class="somarticulate-result">The result is measurable — longer strides, easier breathing, less daily fatigue, and a body that stays aligned with less effort. Clients stand, walk, and move with clearer authority and effortless presence.</p>
-        </div>
-        <div>
-          <h3>What to Expect</h3>
-          <div class="somarticulate-note">
-            <p><strong>No Structural Integration bodywork sessions are required.</strong> This is pure movement training — practical, progressive, and rooted in Rolf principles. No prior experience necessary.</p>
-            <p>The work is highly learnable for all humans — from people rebuilding basic mobility all the way through to elite athletes. Each exercise uses clear, repeatable cues that elicit new behavior: somatic movement intelligence, precise hinging, and resequencing of strength patterns that re-teach the body to move with efficiency, ease, and a sense of support.</p>
-            <p>For those interested in deeper bodywork: Rolfing Structural Integration works hands-on with fascial compensation patterns through direct touch in private 1-to-1 sessions. Typically, 10-series work spans a few months; 1–3 sessions can address more acute issues outside of 10-series work.</p>
+        <div class="process-item fade-in">
+          <div>
+            <p class="process-item-title">Opening to What Is Possible</p>
+            <p class="process-item-body">The body's capacity to receive — prosperity, connection, opportunity, love — expands as its contractions release. The process makes visible what was previously blocked from view, and creates the inner ground to walk toward it.</p>
           </div>
         </div>
       </div>
-    </div>
-
-    <div style="text-align:center;margin-top:3rem;">
-      <button class="btn-secondary" onclick="showPage('investment')">See What's Included →</button>
+      <div class="process-aside fade-in">
+        <p class="process-aside-title">This is why the work continues after you leave.</p>
+        <p class="process-aside-body">Woven around and between every clinical session is a living group process — choreographed conversations that use art, nature, and intentional exchange as the medium. This process is not separate from the bodywork. It is what allows the bodywork to land more deeply, to integrate more fully, and to connect to purpose.<br><br>As the body opens physiologically, the process creates the relational and expressive space for what emerges to be witnessed, spoken, and grounded. Empowerment-based and emergent — guided without being prescribed. What unfolds does so because the conditions are right for it.</p>
+      </div>
     </div>
   </div>
-  <footer class="site-footer">
-    <p class="footer-name">Brighten Your Being</p>
-    <p>Dragonfly Ranch · Near Boulder, Colorado</p>
-    <p class="tagline">Regenerative Clinical Ecosystem · brightenyourbeing.com</p>
-  </footer>
-</div>
+</section>
 
-<!-- ═══════════════
-     INVESTMENT
-═══════════════ -->
-<div class="page" id="page-investment">
-  <div class="inner">
-    <p class="section-label">What's Included</p>
-    <h2 class="section-title">Everything You Need. <em>Nothing to Arrange.</em></h2>
-
-    <div class="included-grid">
-      <div class="included-card">
-        <span class="included-icon" aria-hidden="true">🏡</span>
-        <h3>Overnight Lodging</h3>
-        <p>Private forest-based setting at Dragonfly Ranch designed for nervous system regulation and restoration.</p>
+<section class="possible-section">
+  <div class="section-inner">
+    <p class="section-eyebrow fade-in">What Becomes Possible</p>
+    <h2 class="section-title fade-in">When Your Body Opens,<br><em>Everything Opens</em></h2>
+    <div class="possible-grid">
+      <div class="possible-card fade-in">
+        <h3 class="possible-card-title">Presence &amp; Authenticity</h3>
+        <p class="possible-card-body">When the nervous system is regulated and the body is no longer bracing, you stop performing. What emerges is the version of you that is simply, genuinely, undeniably present — and that presence changes every room you walk into.</p>
       </div>
-      <div class="included-card">
-        <span class="included-icon" aria-hidden="true">🍽️</span>
-        <h3>Chef-Prepared Meals</h3>
-        <p>Nourishing, plant-forward meals to support steady energy, metabolic balance, and deep restoration.</p>
+      <div class="possible-card fade-in">
+        <h3 class="possible-card-title">Personal Power</h3>
+        <p class="possible-card-body">Personal power is not a personality trait. It is a physiological state — it radiates from a body that is regulated, structurally grounded, and fully alive. This weekend works directly on the biology underneath it. Your own power, from the inside out.</p>
       </div>
-      <div class="included-card">
-        <span class="included-icon" aria-hidden="true">⚡</span>
-        <h3>All Clinical Sessions</h3>
-        <p>Neurofeedback, microcirculation optimization, and SOMArticulate movement woven across the weekend.</p>
+      <div class="possible-card fade-in">
+        <h3 class="possible-card-title">Opening to Prosperity</h3>
+        <p class="possible-card-body">The body carries the contractions that limit what we allow ourselves to receive. When those contractions release — physiologically, neurologically, structurally — the capacity to receive expands. New possibilities become visible that were simply not there before.</p>
       </div>
-      <div class="included-card">
-        <span class="included-icon" aria-hidden="true">🌲</span>
-        <h3>Group Process &amp; Forest Immersion</h3>
-        <p>Small-group connection, art, nature, and guided exchange designed to help the work integrate.</p>
+      <div class="possible-card fade-in">
+        <h3 class="possible-card-title">Letting Go, Birthing the New</h3>
+        <p class="possible-card-body">Old patterns live in the body — in posture, in bracing, in the nervous system's learned vigilance. This weekend creates the conditions for those patterns to genuinely release, making space for who you are becoming. Not who you were. Who you are.</p>
       </div>
-      <div class="included-card">
-        <span class="included-icon" aria-hidden="true">🔄</span>
-        <h3>Post-Weekend Integration</h3>
-        <p>A guided integration call and follow-up education to help the recalibration continue after you leave.</p>
+      <div class="possible-card fade-in">
+        <h3 class="possible-card-title">Clarity &amp; Aligned Action</h3>
+        <p class="possible-card-body">Grounded, aligned action becomes possible when the body is regulated, the mind is clear, and the connection to purpose is restored. This weekend reconnects you to the specific contribution that belongs to you — and gives you the physiological ground to act from it.</p>
+      </div>
+      <div class="possible-card fade-in">
+        <h3 class="possible-card-title">Your Body's Radiance</h3>
+        <p class="possible-card-body">When circulation is optimized, the nervous system is regulated, and the structure is aligned, the body does not just function better — it shines. You feel it. Others see it. This is what it looks like to optimize your body's capacity to express who you actually are.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <hr class="divider">
+<section class="schedule-section">
+  <div class="section-inner">
+    <p class="section-eyebrow fade-in">How This Experience Unfolds</p>
+    <h2 class="section-title fade-in">Three Days,<br><em>Choreographed with Care</em></h2>
+    <p class="section-body fade-in">Structured enough to guide you. Open enough for what needs to emerge.</p>
+    <p class="section-body fade-in" style="margin-top:1rem;">Each day is held within a rhythm of microcirculation sessions that open and close the body's capacity for each day's work. A living group process — through art, nature, and intentional exchange — moves between clinical sessions, holding the arc of collective unfoldment. Space is left, by design, for what cannot be scheduled.</p>
+    <div class="schedule-grid">
+      <div class="schedule-day fade-in">
+        <div class="day-header">
+          <p class="day-label">Friday · June 25</p>
+          <h3 class="day-title">Arrival &amp; First Opening</h3>
+        </div>
+        <ul class="day-items">
+          <li>Welcome and orientation — the clinical arc, the intention, the shape of the container</li>
+          <li>Microcirculation session: preparing the body and the system for what is coming</li>
+          <li>Movement practice with Rosie — orienting the body, finding length and ease as the group settles in</li>
+          <li>First group process session: arriving into presence — and into relationship with the others here</li>
+          <li>Nature-based exchange as the group begins to find its ground together</li>
+          <li>Closing microcirculation to ease the nervous system into the forest and into rest</li>
+        </ul>
+      </div>
+      <div class="schedule-day fade-in">
+        <div class="day-header">
+          <p class="day-label">Saturday · June 26</p>
+          <h3 class="day-title">Deep Recalibration</h3>
+        </div>
+        <ul class="day-items">
+          <li>Microcirculation to open the day and activate the system</li>
+          <li>Structural alignment movement practice with Rosie: orienting the body for the day's deeper work</li>
+          <li>Group process: art and nature as medium — what is releasing, what is emerging, what wants to be witnessed</li>
+          <li>Neurofeedback session with LoriGrace: nervous system regulation and cognitive reset</li>
+          <li>Open time in the landscape — integration, rest, the reset only a forest provides</li>
+          <li>Closing microcirculation: sealing the day's work into the body</li>
+        </ul>
+      </div>
+      <div class="schedule-day fade-in">
+        <div class="day-header">
+          <p class="day-label">Sunday · June 27</p>
+          <h3 class="day-title">Integration &amp; Emergence</h3>
+        </div>
+        <ul class="day-items">
+          <li>Microcirculation to begin the final day fully open</li>
+          <li>Final neurofeedback session with LoriGrace</li>
+          <li>Closing group process: what shifted, what is grounded, what is now yours to carry forward</li>
+          <li>Closing circle — within, between, and among: what formed here</li>
+          <li>Closing microcirculation: departing with the system fully integrated and alive</li>
+          <li>Personal pathway conversation with LoriGrace — what your continuation looks like to optimize your well-being</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <p class="section-label">Choose the Depth That's Right for You</p>
-    <h2 class="section-title">Investment <em>&amp; Options</em></h2>
+<section class="included-section">
+  <div class="section-inner">
+    <p class="section-eyebrow fade-in">What's Included</p>
+    <h2 class="section-title fade-in">Everything You Need.<br><em>Nothing to Arrange.</em></h2>
+    <div class="included-grid">
+      <div class="included-item fade-in">
+        <h3 class="included-title">Overnight Lodging at Dragonfly Ranch</h3>
+        <p class="included-body">A private forest-based residential setting designed to support nervous system regulation and restoration.</p>
+      </div>
+      <div class="included-item fade-in">
+        <h3 class="included-title">Exquisite Chef-Prepared Meals</h3>
+        <p class="included-body">Nourishing, plant-forward meals prepared with care to support steady energy, metabolic balance, and deep restoration.</p>
+      </div>
+      <div class="included-item fade-in">
+        <h3 class="included-title">All Clinical Sessions</h3>
+        <p class="included-body">Neurofeedback, microcirculation optimization, and structural integration movement work woven across the weekend.</p>
+      </div>
+      <div class="included-item fade-in">
+        <h3 class="included-title">Group Process &amp; Forest Immersion</h3>
+        <p class="included-body">Small-group connection, art, nature, and guided exchange designed to help the work integrate.</p>
+      </div>
+      <div class="included-item fade-in">
+        <h3 class="included-title">Post-Weekend Integration Support</h3>
+        <p class="included-body">A guided integration call and simple follow-up education to help the recalibration continue after you leave.</p>
+      </div>
+      <div class="included-item fade-in">
+        <h3 class="included-title">Small Intentional Group</h3>
+        <p class="included-body">Strictly limited enrollment so each participant receives meaningful clinical attention and the group field remains coherent.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <p class="pricing-badge">Upcoming</p>
-        <h3>Regenerative Recalibration Weekend</h3>
-        <span class="dates">May 29–31, 2026</span>
-        <p>Three days at a private forest property near Boulder, Colorado. Neurofeedback, microcirculation optimization, SOMArticulate movement practice, and a living group process in nature.</p>
-        <p class="price">$1,369</p>
-        <span class="price-note">Introductory Investment · By Application</span>
-        <ul class="pricing-features">
+<section class="clinicians-section">
+  <div class="section-inner">
+    <p class="section-eyebrow fade-in">Your Guides for the Weekend</p>
+    <h2 class="section-title fade-in">Decades of Clinical<br><em>Depth. One Weekend.</em></h2>
+    <p class="section-body fade-in" style="text-align:center; max-width:700px; margin:0 auto 3rem;">This is a clinical immersion led by two of the most experienced practitioners in their fields — working in an intentionally choreographed collaboration.</p>
+    <div class="clinicians-grid">
+      <div class="fade-in">
+        <div class="clinician-photo-wrap">
+          <img src="LORIGRACE_PHOTO.png" alt="LoriGrace Kochevar">
+        </div>
+        <div class="clinician-border">
+          <p class="clinician-role">Lead Clinician · Host · Founder, Brighten Your Being</p>
+          <h3 class="clinician-name">LoriGrace Kochevar</h3>
+          <p class="clinician-cred">MS · LPC · 35+ Years Clinical Practice</p>
+          <p class="clinician-bio">I've spent more than three decades at the intersection of neurobiology, trauma resolution, and family systems — a clinician who never stopped asking why the body holds what it holds, and what it genuinely takes to release it.<br><br>I founded Brighten Your Being and built the Regenerative Clinical Ecosystem at Dragonfly Ranch — because I believe real transformation requires the right setting, the right clinical depth, and the right human container.</p>
+          <div class="clinician-brings">
+            <div class="brings-item"><p class="brings-text">Neurofeedback that trains the brain's own regulatory capacity — a measurable, lasting shift in how the nervous system organizes itself</p></div>
+            <div class="brings-item"><p class="brings-text">Microcirculation optimization working at the cellular foundation — restoring energy, regeneration, and radiant vitality</p></div>
+            <div class="brings-item"><p class="brings-text">A trauma-informed clinical lens built over 35 years — so the entire weekend feels safe enough for genuine transformation</p></div>
+            <div class="brings-item"><p class="brings-text">The quality of seeing that only comes from decades of presence — meeting each person exactly where they are</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="fade-in">
+        <div class="clinician-photo-wrap">
+          <img src="ROSIE_PHOTO.png" alt="Rosalynde Sara Smith">
+        </div>
+        <div class="clinician-border">
+          <p class="clinician-role">Your Rolfer · Structural Integration</p>
+          <h3 class="clinician-name">Rosalynde Smith, aka Rose</h3>
+          <p class="clinician-cred">Certified Rolfer · Rolf Movement Practitioner</p>
+          <p class="clinician-bio">I am a certified Rolfer and Rolf Movement Practitioner with nearly twenty years of experience, trained at the Dr. Ida Rolf Institute in Boulder. My multimodal practice focuses on Structural Integration through bodywork, combined with Rolf Movement/SI-inspired movement repatterning.<br><br>During our Immersions, we will focus on movement.</p>
+          <div class="clinician-brings">
+            <div class="brings-item"><p class="brings-text">Reorganize weight and support through your feet and legs for a stable, grounded base</p></div>
+            <div class="brings-item"><p class="brings-text">Align your pelvis, spine, and shoulders so gravity works with you instead of against you</p></div>
+            <div class="brings-item"><p class="brings-text">Release habitual bracing in the neck, jaw, and arms</p></div>
+            <div class="brings-item"><p class="brings-text">Build smoother coordination between your head, torso, and limbs</p></div>
+          </div>
+          <p class="clinician-bio" style="margin-top:1.5rem;">Each movement session builds on the last. The patterns are concrete and functional — designed to become your new normal during daily activities. The result is measurable — longer strides, easier breathing, less daily fatigue, and a body that stays aligned with less effort.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="offerings-section">
+  <div class="section-inner">
+    <p class="section-eyebrow fade-in">What Is Available at Dragonfly Ranch</p>
+    <h2 class="section-title fade-in">Choose the Depth<br><em>That's Right for You</em></h2>
+    <div class="offerings-grid">
+      <div class="offering-card fade-in">
+        <span class="offering-tag">Upcoming</span>
+        <h3 class="offering-title">Regenerative Recalibration Weekend</h3>
+        <span class="offering-dates">June 25–27, 2026</span>
+        <p class="offering-body">A private forest property near Boulder, Colorado. Neurofeedback, microcirculation optimization, structural integration, and a living group process in nature. For people who have done the inner work and are ready for a body that can hold what they know.</p>
+        <div class="offering-price-block">
+          <span class="offering-price">$1,369</span>
+          <span class="offering-price-label">Introductory Investment · By Application</span>
+        </div>
+        <ul class="offering-features">
           <li>Overnight lodging at Dragonfly Ranch</li>
           <li>Exquisite chef-prepared meals</li>
           <li>Neurofeedback sessions</li>
           <li>Microcirculation optimization</li>
-          <li>SOMArticulate movement practice</li>
+          <li>Structural integration movement work</li>
           <li>Small-group process &amp; forest immersion</li>
           <li>Post-weekend integration support</li>
         </ul>
-        <div class="pricing-note-box">If you continue into a full 5-Day Regenerative Immersion, $500 of your weekend investment applies toward that immersive.</div>
-        <a href="https://info.brightenyourbeing.com/widget/survey/8J2h2x6CcT0ioehCpc5W" class="btn-primary" target="_blank">Apply to Join</a>
+        <p class="offering-note">If you continue into a full 5-Day Regenerative Immersion, $500 of your weekend investment applies toward that immersive.</p>
+        <a href="https://info.brightenyourbeing.com/widget/survey/8J2h2x6CcT0ioehCpc5W" class="btn-primary" style="margin-top:2rem; display:inline-block;">Apply to Join</a>
       </div>
-      <div class="pricing-card">
-        <p class="pricing-badge">Available Year-Round</p>
-        <h3>5-Day Immersion</h3>
-        <span class="dates">Next date: July 16–21, 2026</span>
-        <p>A deeper residential experience for those ready for more. A full five days to go further into the work — structurally, neurologically, and in the living group field that forms at Dragonfly Ranch.</p>
-        <div class="pricing-note-box" style="margin-top:2rem;">If you continue into a full 5-Day Regenerative Immersion, $500 of your weekend investment applies toward that immersive.</div>
-        <a href="tel:970-352-8873" class="btn-secondary">Reach out to LoriGrace · 970-352-8873</a>
+      <div class="offering-card offering-card--alt fade-in">
+        <span class="offering-tag">Available Year-Round</span>
+        <h3 class="offering-title">5-Day Immersion</h3>
+        <span class="offering-dates">Next date: July 22–26, 2026</span>
+        <p class="offering-body">A deeper residential experience for those ready for more. A full five days to go further into the work — structurally, neurologically, and in the living group field that forms at Dragonfly Ranch. Includes the full 10-session neurofeedback functionality upgrade and 20 sessions of microcirculation optimization.</p>
+        <div class="offering-price-block">
+          <span class="offering-price">$3,369</span>
+          <span class="offering-price-label">Full Immersion Investment · By Application</span>
+        </div>
+        <p class="offering-note">If you continue into the full 5-Day Regenerative Immersion, $500 of your weekend investment applies toward that immersive.</p>
+        <a href="https://info.brightenyourbeing.com/widget/survey/8J2h2x6CcT0ioehCpc5W" class="btn-primary" style="margin-top:2rem; display:inline-block;">Apply to Join</a>
+        <p class="offering-note" style="margin-top:2rem;">If you have any questions, text LoriGrace</p>
+        <a href="sms:9703528873" class="btn-outline" style="margin-top:1rem; display:inline-block;">970-352-8873</a>
       </div>
     </div>
-
-    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--text-body);text-align:center;max-width:780px;margin:3rem auto 0;line-height:1.65;">This is a first taste — offered at an introductory investment, in a small enough container that it can be real. The full Regenerative Immersion goes deeper. But this weekend will show you what is possible within, between, and among.</p>
-
-    <div style="text-align:center;margin-top:3rem;">
-      <button class="btn-secondary" onclick="showPage('apply')">Ready to Apply →</button>
-    </div>
+    <p class="offering-footer fade-in">This is a first taste — offered at an introductory investment, in a small enough container that it can be real. The full Regenerative Immersion goes deeper. But this weekend will show you what is possible within, between, and among. And that changes everything.</p>
   </div>
-  <footer class="site-footer">
-    <p class="footer-name">Brighten Your Being</p>
-    <p>Dragonfly Ranch · Near Boulder, Colorado</p>
-    <p class="tagline">Regenerative Clinical Ecosystem · brightenyourbeing.com</p>
-  </footer>
-</div>
+</section>
 
-<!-- ═══════════════
-     APPLY
-═══════════════ -->
-<div class="page" id="page-apply">
-  <div class="inner">
-    <p class="section-label">Logistics &amp; Details</p>
-    <h2 class="section-title light">What You Need <em>to Know</em></h2>
-
+<section class="logistics-section">
+  <div class="section-inner">
+    <p class="section-eyebrow fade-in">Logistics &amp; Details</p>
+    <h2 class="section-title fade-in">What You Need<br><em>to Know</em></h2>
     <div class="logistics-grid">
-      <div class="logistics-item">
-        <h3>Dates</h3>
-        <p>May 29–31, 2026<br>Friday evening arrival through Sunday afternoon departure</p>
+      <div class="logistics-card fade-in">
+        <span class="logistics-label">Dates</span>
+        <span class="logistics-value">June 25–27, 2026</span>
+        <p class="logistics-body">Friday evening arrival through Sunday afternoon departure</p>
       </div>
-      <div class="logistics-item">
-        <h3>Location</h3>
-        <p>Dragonfly Ranch<br>Private forested property near Boulder, Colorado<br>Directions upon enrollment</p>
+      <div class="logistics-card fade-in">
+        <span class="logistics-label">Location</span>
+        <span class="logistics-value">Dragonfly Ranch</span>
+        <p class="logistics-body">Private forested property, near Boulder, Colorado — directions shared upon enrollment</p>
       </div>
-      <div class="logistics-item">
-        <h3>Group Size</h3>
-        <p>Intentionally Small<br>Strictly limited — because real intimacy and clinical depth both require it</p>
+      <div class="logistics-card fade-in">
+        <span class="logistics-label">Group Size</span>
+        <span class="logistics-value">Intentionally Small</span>
+        <p class="logistics-body">Strictly limited — because real intimacy and clinical depth both require it</p>
       </div>
-      <div class="logistics-item">
-        <h3>Investment</h3>
-        <p>$1,369<br>Introductory pricing, offered at this level by design</p>
-      </div>
-    </div>
-
-    <hr class="divider-dark">
-
-    <p class="section-label">After You Apply</p>
-    <h2 class="section-title light">A Simple, <em>Human Process</em></h2>
-    <p style="text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:rgba(252,250,245,.8);">Enrollment happens through conversation — not checkout.</p>
-
-    <div class="application-steps">
-      <div class="application-step">
-        <p class="step-number" aria-hidden="true">1</p>
-        <div class="step-content">
-          <h3>Complete a Brief Fit Form</h3>
-          <p>Just enough for us to understand where you are and what you are looking for</p>
-        </div>
-      </div>
-      <div class="application-step">
-        <p class="step-number" aria-hidden="true">2</p>
-        <div class="step-content">
-          <h3>LoriGrace Reviews Your Application</h3>
-          <p>And responds within 48 hours</p>
-        </div>
-      </div>
-      <div class="application-step">
-        <p class="step-number" aria-hidden="true">3</p>
-        <div class="step-content">
-          <h3>Invitation to a Short Conversation</h3>
-          <p>If it appears aligned, you are invited into a short conversation — no pressure, no obligation, just a real exchange</p>
-        </div>
-      </div>
-      <div class="application-step">
-        <p class="step-number" aria-hidden="true">4</p>
-        <div class="step-content">
-          <h3>Enrollment Confirmed</h3>
-          <p>After fit, investment, and logistics are complete — you receive everything you need to arrive</p>
-        </div>
+      <div class="logistics-card fade-in">
+        <span class="logistics-label">Investment</span>
+        <span class="logistics-value">Introductory Pricing</span>
+        <p class="logistics-body">A meaningful reduction from the full immersion — offered at this level by design</p>
       </div>
     </div>
-
-    <div class="apply-cta">
-      <p>If something in you knows it's time for more —</p>
-      <span class="tagline-lg">this is where that becomes real.</span>
-      <a href="https://info.brightenyourbeing.com/widget/survey/8J2h2x6CcT0ioehCpc5W" class="btn-primary" target="_blank">Apply to Join</a>
-      <p>Includes overnight lodging, exquisite chef-prepared meals, clinical sessions, group process, and integration support.</p>
-      <p>No pressure. No expectation. Just a conversation to see if this is the right fit for you.</p>
-      <span class="final-details">May 29–31, 2026 · Dragonfly Ranch · Near Boulder, Colorado · $1,369 Introductory Investment</span>
-    </div>
+    <p class="logistics-note fade-in">For some participants, this weekend is complete in itself. For others, it becomes the first doorway into the deeper 5-Day Regenerative Immersion. We will help you listen for what is true for your body — without pressure.</p>
   </div>
-  <footer class="site-footer">
-    <p class="footer-name">Brighten Your Being</p>
-    <p>Dragonfly Ranch · Near Boulder, Colorado</p>
-    <p class="tagline">Regenerative Clinical Ecosystem · brightenyourbeing.com</p>
-  </footer>
-</div>
+</section>
+
+<section class="cta-section" id="apply">
+  <div class="cta-inner">
+    <p class="cta-eyebrow fade-in">After You Apply</p>
+    <h2 class="cta-title fade-in">A Simple,<br><em>Human Process</em></h2>
+    <p class="cta-body fade-in">Enrollment happens through conversation — not checkout. No pressure. No expectation. Just a real exchange to see if this is the right fit for you.</p>
+    <div style="display:flex; flex-direction:column; gap:1rem; align-items:center; margin:2rem 0;">
+      <p class="cta-detail fade-in">Complete a brief fit form — just enough for us to understand where you are and what you are looking for</p>
+      <p class="cta-detail fade-in">Receive an invitation to a short conversation — no pressure, no obligation</p>
+      <p class="cta-detail fade-in">Enrollment confirmed — then you receive everything you need to arrive</p>
+    </div>
+    <p class="cta-body fade-in" style="font-style:italic; margin-bottom:2rem;">If something in you knows it's time for more — this is where that becomes real.</p>
+    <a href="https://info.brightenyourbeing.com/widget/survey/8J2h2x6CcT0ioehCpc5W" class="btn-primary fade-in">Apply to Join</a>
+    <p class="cta-detail fade-in" style="margin-top:2rem;">June 25–27 · Dragonfly Ranch, near Boulder, Colorado · Introductory Investment · Full Immersion Pathways Available After</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom">
+    <div class="footer-site">brightenyourbeing.com<br>970-352-8873</div>
+    <div class="footer-detail">Regenerative Clinical Ecosystem · Dragonfly Ranch · Boulder, Colorado</div>
+    <div class="footer-contact">By Invitation Only<br>Enrollment by Application</div>
+  </div>
+</footer>
 
 <script>
-  function showPage(id) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    const target = document.getElementById('page-' + id);
-    if (target) { target.classList.add('active'); window.scrollTo(0,0); }
-    document.querySelectorAll('[data-page]').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.page === id);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), 80);
+        observer.unobserve(entry.target);
+      }
     });
-  }
-
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  hamburger.addEventListener('click', () => {
-    const open = mobileMenu.classList.toggle('open');
-    hamburger.classList.toggle('open', open);
-    hamburger.setAttribute('aria-expanded', open);
-    hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-  });
-  function closeMobile() {
-    mobileMenu.classList.remove('open');
-    hamburger.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
-    hamburger.setAttribute('aria-label', 'Open menu');
-  }
-
-  document.querySelectorAll('[data-page="home"]').forEach(b => b.classList.add('active'));
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
