@@ -401,6 +401,10 @@ hr.divider {
   font-weight: 400; margin-top: 28px; line-height: 1.7;
 }
 
+.cta-apply {
+  font-family: 'Cormorant Garamond', serif; font-size: 40px;
+  font-weight: 150; color: #ffffff; 
+}
 /* ─────────────────────────────────────────
    FOOTER
 ───────────────────────────────────────── */
